@@ -19,12 +19,24 @@ add_executable(
   main.cc
 )
 
+add_executable(
+  conways-game
+  conways.cc
+)
+
 # -L Link lib
 target_link_libraries(bruck_algorithm PRIVATE MPI::MPI_CXX)
 
 # -I include directories
 target_include_directories(
   bruck_algorithm PRIVATE
+  ${MPI_INCLUDE_PATH}
+  ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
+# -I include directories
+target_include_directories(
+  conways-game PRIVATE
   ${MPI_INCLUDE_PATH}
   ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
