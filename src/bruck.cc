@@ -2,7 +2,9 @@
 /// @file bruck.cc
 /// @brief The implementation of the Bruck algorithm demonstration.
 ///
+///
 
+/// includes
 #include <mpi.h>
 
 #include <cstring>
@@ -10,6 +12,7 @@
 #include "multiarray.hpp"
 #include "randin.hpp"
 
+/// @brief Namespace for MPI communication algorithms.
 namespace mpi_algorithm
 {
 template <typename T>
@@ -36,6 +39,14 @@ struct mpi_type_traits<long>
   static MPI_Datatype get() { return MPI_LONG; }
 };
 
+///
+/// @brief Bruck's All-to-All communication algorithm using non-blocking MPI calls.
+/// @tparam T Value type of the array elements.
+/// @tparam NumD Number of dimensions of the array.
+/// @param send_arr Send array containing data to be sent to other processes.
+/// @param recv_arr Recv array to store received data from other processes.
+/// @param comm MPI Communicator for the communication.
+///
 template <typename T, size_t NumD>
 void Bruck_Alltoall_noneblocking(
   const multi_array::array<T, NumD>& send_arr,
@@ -143,7 +154,10 @@ void Bruck_Alltoall_noneblocking(
       &recv_data[j * elements_per_proc],
       elements_per_proc * sizeof(T));
   }
-  std::memcpy(recv_data, final_temp.data(), total_elements * sizeof(T));
+  std::memcpy(
+    recv_data,
+    final_temp.data(),
+    total_elements * sizeof(T));
 }
 
 }  // end namespace mpi_algorithm
