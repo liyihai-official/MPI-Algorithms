@@ -107,6 +107,9 @@ class array
   const_iterator end() const noexcept { return data_.get() + total_size_; }
   const_iterator cend() const noexcept { return data_.get() + total_size_; }
 
+  // Member Operation
+  void swap(array&) noexcept;
+
   // Element Access
  public:
   template <std::integral... Exts>
@@ -140,15 +143,16 @@ std::ostream& operator<<(
   {
     if (current_dim == NumD - 1)
     {
-      os << "|";
+      // os << "|";
       for (size_t i = 0; i < arr.shape().dims[current_dim]; ++i)
       {
         os << std::fixed
            << std::setprecision(5)
-           << std::setw(12)
+           << std::setw(2)
            << arr[offset + i];
       }
-      os << " |\n";
+      // os << " |\n";
+      os << "\n";
     }
     else
     {

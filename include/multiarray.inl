@@ -311,4 +311,12 @@ inline void array<T, NumD>::total_size() noexcept
     total_size_ *= shape_.dims[i];
 }
 
+template <typename T, size_t NumD>
+inline void array<T, NumD>::swap(array<T, NumD>& other) noexcept
+{
+  std::swap(data_, other.data_);
+  std::swap(shape_, other.shape_);
+  std::swap(total_size_, other.total_size_);
+}
+
 }  // end of namespace multi_array
