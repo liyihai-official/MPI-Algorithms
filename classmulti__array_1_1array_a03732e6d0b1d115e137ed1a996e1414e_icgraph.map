@@ -1,0 +1,21 @@
+<map id="multi_array::array::array" name="multi_array::array::array">
+<area shape="rect" id="Node000001" title="Constructor for the multi&#45;dimensional array class." alt="" coords="456,227,595,267"/>
+<area shape="rect" id="Node000002" href="$structmulti__array_1_1multi__array__shape.html#aa84256b160c295b6dc94ad1f126c1777" title="Computes the strides for the multi&#45;dimensional array shape." alt="" coords="233,5,408,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="507,216,467,145,439,107,406,73,391,62,394,58,410,69,443,104,472,142,512,213"/>
+<area shape="rect" id="Node000004" href="$structmulti__array_1_1multi__array__shape.html#ae6cdfcaf58147dcceeaf2f0889c43518" title="Constructs a multi&#45;dimensional array shape." alt="" coords="245,84,396,139"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="491,220,452,186,407,154,385,141,387,136,409,149,455,182,495,216"/>
+<area shape="rect" id="Node000005" href="$classmulti__array_1_1array.html#a0862b737b46663fe8d0ae69d8f4b2a83" title="Access an element in the multi&#45;dimensional array using multi&#45;dimensional indices." alt="" coords="251,163,390,203"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="447,226,384,206,386,201,448,221"/>
+<area shape="rect" id="Node000006" href="$classmulti__array_1_1array.html#a2c46f6c793dcbd2bf283bcb370d2d7a0" title=" " alt="" coords="251,227,390,267"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="442,250,390,250,390,245,442,245"/>
+<area shape="rect" id="Node000007" href="$classmulti__array_1_1array.html#a51fbb4e8c0588ed0523d78707c449a67" title="Access an element in the multi&#45;dimensional array using a flat index." alt="" coords="251,291,390,331"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="448,274,386,294,384,289,447,269"/>
+<area shape="rect" id="Node000008" href="$classmulti__array_1_1array.html#a00610c7231b19eedbaae51904912355d" title="Access a constant element in the multi&#45;dimensional array using a flat index." alt="" coords="251,355,390,395"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="495,279,456,313,409,346,385,358,383,353,407,341,453,309,492,275"/>
+<area shape="rect" id="Node000009" href="$classmulti__array_1_1array.html#afc1cd66c80c58a8301d040e7b1ebf596" title="Calculate the total size of the array." alt="" coords="251,419,390,459"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="510,281,470,346,442,380,410,409,390,422,387,417,406,405,438,376,466,342,506,278"/>
+<area shape="rect" id="Node000003" href="$structmpi__topology_1_1Cartesian.html#a3da36dad61104ceabc2d661097cf9798" title="explicit Constructor from a global multiarray_shape" alt="" coords="5,13,185,53"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="220,35,185,35,185,30,220,30"/>
+<area shape="rect" id="Node000010" href="$classmulti__array_1_1array.html#a718b04b3557672cb66dfec06f0e8da45" title="Constructor for the multi&#45;dimensional array class with specified dimensions." alt="" coords="26,419,165,459"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="238,442,165,442,165,437,238,437"/>
+</map>

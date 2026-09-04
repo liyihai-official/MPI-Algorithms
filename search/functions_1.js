@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['begin_0',['begin',['../classmulti__array_1_1array.html#a9901c4efbdbd18a8eb577783311c6eb9',1,'multi_array::array::begin() noexcept'],['../classmulti__array_1_1array.html#adb1dc6bedd9f31f287a90e801fadf258',1,'multi_array::array::begin() const noexcept']]],
+  ['bruck_5falltoall_5fnoneblocking_1',['Bruck_Alltoall_noneblocking',['../namespacempi__algorithm.html#a5f4db94e91d99d00ce6b9808c7370a5c',1,'mpi_algorithm']]]
+];
