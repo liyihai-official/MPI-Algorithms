@@ -26,6 +26,7 @@ add_executable(
 
 # -L Link lib
 target_link_libraries(bruck_algorithm PRIVATE MPI::MPI_CXX)
+target_link_libraries(conways-game PRIVATE MPI::MPI_CXX)
 
 # -I include directories
 target_include_directories(
