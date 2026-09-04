@@ -28,6 +28,7 @@ Cartesian<T, NumD>::Cartesian(Cartesian&& other) noexcept
     nbr_dest(std::move(other.nbr_dest)),
     coordinates(std::move(other.coordinates)),
     halos(std::move(other.halos)),
+    size(std::move(other.size)),
     rank(std::move(other.rank)),
     comm_cart(other.comm_cart)
 {
@@ -64,6 +65,7 @@ Cartesian<T, NumD>::operator=(Cartesian<T, NumD>&& other) noexcept
     coordinates(std::move(other.coordinates));
     halos(std::move(other.halos));
     rank(std::move(other.rank));
+    size(std::move(other.size));
     comm_cart(other.comm_cart);
 
     other.comm_cart = MPI_COMM_NULL;
@@ -101,7 +103,7 @@ Cartesian<T, NumD>::Cartesian(
   : global_shape(glob_shape),
     local_shape(glob_shape)
 {
-  int size, orig_rank;
+  int orig_rank;
   MPI_Comm_size(comm, &size);
   MPI_Comm_rank(comm, &rank);
 
@@ -184,3 +186,51 @@ Cartesian<T, NumD>::Cartesian(
 }
 
 }  // namespace mpi_topology
+
+namespace mpi_array
+{
+
+/// @brief deconstructor, free MPI resources
+/// @tparam T Value type
+/// @tparam NumD  Number of dimensions.
+template <typename T, size_t NumD>
+array_cartesian<T, NumD>::~array_cartesian()
+{
+  for (auto& halo : topology.halos)
+    if (halo != MPI_DATATYPE_NULL) MPI_Type_free(&halo);
+}
+
+/// @brief Print in order, a friend function of array Cartesian IO.
+/// @tparam _U Value type
+/// @tparam _NumD Number of dimension
+/// @param os std::os stream
+/// @param in input distributed array
+/// @return a reference of std::ostream.
+template <class _T, size_t _NumD>
+std::ostream& operator<<(
+  std::ostream& os,
+  const array_cartesian<_T, _NumD>& in)
+{
+  MPI_Barrier(in.topology.comm_cart);
+  usleep(1000);
+  MPI_Barrier(in.topology.comm_cart);
+
+  for (int i = 0; i < in.topology.size; ++i)
+  {
+    if (i == in.topology.rank)
+    {
+      os
+        << "\nProc : " << in.topology.rank << " of "
+        << in.topology.size << " is printing. \n";
+
+      os << in.current_data;
+    }
+    fflush(stdout);
+    usleep(1000);
+    MPI_Barrier(in.topology.comm_cart);
+  }
+
+  return os;
+}
+
+}  // namespace mpi_array

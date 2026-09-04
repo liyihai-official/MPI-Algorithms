@@ -20,6 +20,14 @@
 
 #include "multiarray.hpp"
 
+/*
+ *
+ *
+ * namespace of mpi topology, which contains types of MPI_Topology
+ * structures and provides various features for distributed communication.
+ *
+ */
+
 namespace mpi_topology
 {
 
@@ -29,6 +37,7 @@ namespace mpi_topology
 ///
 /// @tparam T Value type of array
 /// @tparam NumD Number of dimensions.
+///
 template <typename T, size_t NumD>
 struct Cartesian
 {
@@ -41,7 +50,7 @@ struct Cartesian
   array_idx starts{}, ends{}, dims{}, periods{};
   array_idx nbr_src{}, nbr_dest{}, coordinates{};
   array_halos halos{};
-  int rank{-1};
+  int rank{-1}, size{-1};
 
  public:
   MPI_Comm comm_cart{MPI_COMM_NULL};
@@ -66,6 +75,62 @@ struct Cartesian
 };  // end of struct Cartesian
 }  // end of namespace mpi_topology
 
+/*
+ *
+ *
+ *
+ *
+ *
+ */
+
+#include <unistd.h>
+
+#include <iomanip>
+/// @brief
+namespace mpi_array
+{
+
+template <typename T, size_t NumD>
+class array_cartesian
+{
+  // Private member variables
+ public:
+  mpi_topology::Cartesian<T, NumD> topology{};
+  multi_array::array<T, NumD> current_data{}, next_data{};
+
+  // Cons & Decons
+ public:
+  array_cartesian(
+    const multi_array::multi_array_shape<NumD>& global_shape,
+    MPI_Comm comm) : topology(global_shape,
+                              comm),
+                     current_data(topology.local_shape),
+                     next_data(topology.local_shape)
+  {
+  }
+
+  array_cartesian(const array_cartesian&) = delete;
+  array_cartesian(array_cartesian&&) = delete;
+
+  array_cartesian& operator=(const array_cartesian&) = delete;
+  array_cartesian& operator=(array_cartesian&&) = delete;
+
+  ~array_cartesian();
+
+  // friend function
+ public:
+  template <class _T, size_t _NumD>
+  friend std::ostream& operator<<(std::ostream&, const array_cartesian<_T, _NumD>&);
+
+  // Communication Methods
+ private:
+  void exchange_halos_noneblocking();
+
+ private:
+};  // end of class array_cartesian
+}  // end of namespace mpi_array
+
 #include "topology_Cartesian.inl"
+#include "topology_Cartesian_exhange.inl"
 
 #endif  // end if TOPOLOGY_CARTESIAN_HPP_YIHAI
