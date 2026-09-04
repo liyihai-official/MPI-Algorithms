@@ -21,5 +21,6 @@ var structmpi__topology_1_1Cartesian =
     [ "nbr_src", "structmpi__topology_1_1Cartesian.html#aff38deba8f96d70176a034338f9093d2", null ],
     [ "periods", "structmpi__topology_1_1Cartesian.html#acd67b803fa5728cc415c53876752dae5", null ],
     [ "rank", "structmpi__topology_1_1Cartesian.html#a2fc490c9341bf5d766376eded2354198", null ],
+    [ "size", "structmpi__topology_1_1Cartesian.html#ac28c15128e48e5ebaca1ff4633c035f6", null ],
     [ "starts", "structmpi__topology_1_1Cartesian.html#ad6098e55ac9704872145e5a54673fdcb", null ]
 ];

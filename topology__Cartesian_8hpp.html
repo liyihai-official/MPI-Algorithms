@@ -102,36 +102,44 @@ $(document).ready(function(){initNavTree('topology__Cartesian_8hpp.html',''); in
 <div class="textblock"><code>#include &lt;mpi.h&gt;</code><br />
 <code>#include &lt;array&gt;</code><br />
 <code>#include &quot;<a class="el" href="multiarray_8hpp_source.html">multiarray.hpp</a>&quot;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
 <code>#include &quot;<a class="el" href="topology__Cartesian_8inl_source.html">topology_Cartesian.inl</a>&quot;</code><br />
+<code>#include &quot;topology_Cartesian_exhange.inl&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for topology_Cartesian.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="topology__Cartesian_8hpp__incl.png" border="0" usemap="#ainclude_2mpi_2topology__Cartesian_8hpp" alt=""/></div>
 <map name="ainclude_2mpi_2topology__Cartesian_8hpp" id="ainclude_2mpi_2topology__Cartesian_8hpp">
-<area shape="rect" title="This file is header file of Cartesian structure in mpi_topology." alt="" coords="201,5,359,45"/>
-<area shape="rect" title=" " alt="" coords="136,93,195,119"/>
-<area shape="poly" title=" " alt="" coords="254,48,195,88,192,83,251,43"/>
-<area shape="rect" title=" " alt="" coords="5,167,61,192"/>
-<area shape="poly" title=" " alt="" coords="272,47,246,84,228,104,208,121,155,142,76,168,74,163,154,137,205,116,225,100,242,81,267,44"/>
-<area shape="rect" href="multiarray_8hpp.html" title="This file provides a multi&#45;dimensional array and its shape templates." alt="" coords="270,93,386,119"/>
-<area shape="poly" title=" " alt="" coords="294,44,316,80,311,83,289,47"/>
-<area shape="rect" href="topology__Cartesian_8inl.html" title="This file contains the implementation of the Cartesian structure implementation in mpi_topology names..." alt="" coords="411,93,579,119"/>
-<area shape="poly" title=" " alt="" coords="332,43,451,86,450,91,331,48"/>
-<area shape="poly" title=" " alt="" coords="276,121,76,169,74,164,275,116"/>
-<area shape="rect" title=" " alt="" coords="85,167,171,192"/>
-<area shape="poly" title=" " alt="" coords="297,121,175,164,173,159,295,116"/>
-<area shape="rect" title=" " alt="" coords="195,167,264,192"/>
-<area shape="poly" title=" " alt="" coords="314,121,258,161,255,156,311,117"/>
-<area shape="rect" title=" " alt="" coords="288,167,368,192"/>
-<area shape="poly" title=" " alt="" coords="331,119,331,153,325,153,325,119"/>
-<area shape="rect" title=" " alt="" coords="392,167,459,192"/>
-<area shape="poly" title=" " alt="" coords="345,117,400,156,397,160,342,121"/>
-<area shape="rect" title=" " alt="" coords="483,167,557,192"/>
-<area shape="poly" title=" " alt="" coords="360,116,477,159,475,164,358,121"/>
-<area shape="rect" title=" " alt="" coords="581,167,659,192"/>
-<area shape="poly" title=" " alt="" coords="376,116,569,163,567,168,374,121"/>
-<area shape="rect" href="multiarray_8inl.html" title="This file contains the implementation of the multi&#45;dimensional array class and its associated shape c..." alt="" coords="683,167,791,192"/>
-<area shape="poly" title=" " alt="" coords="387,115,671,164,670,169,386,120"/>
+<area shape="rect" title="This file is header file of Cartesian structure in mpi_topology." alt="" coords="393,5,551,45"/>
+<area shape="rect" title=" " alt="" coords="184,101,243,126"/>
+<area shape="poly" title=" " alt="" coords="410,48,262,96,256,98,254,93,260,91,408,43"/>
+<area shape="rect" title=" " alt="" coords="5,181,61,207"/>
+<area shape="poly" title=" " alt="" coords="414,48,361,69,307,96,282,116,256,136,209,155,169,165,75,184,74,178,168,160,207,150,253,131,279,112,304,91,359,64,412,43"/>
+<area shape="rect" href="multiarray_8hpp.html" title="This file provides a multi&#45;dimensional array and its shape templates." alt="" coords="318,101,434,126"/>
+<area shape="poly" title=" " alt="" coords="452,48,401,93,398,89,449,44"/>
+<area shape="rect" title=" " alt="" coords="717,181,792,207"/>
+<area shape="poly" title=" " alt="" coords="474,45,478,89,486,112,499,131,705,178,703,184,496,136,481,114,473,90,468,46"/>
+<area shape="rect" title=" " alt="" coords="509,101,584,126"/>
+<area shape="poly" title=" " alt="" coords="491,44,530,88,526,92,487,47"/>
+<area shape="rect" href="topology__Cartesian_8inl.html" title="This file contains the implementation of the Cartesian structure implementation in mpi_topology names..." alt="" coords="608,101,776,126"/>
+<area shape="poly" title=" " alt="" coords="521,43,651,93,649,98,519,48"/>
+<area shape="rect" title=" " alt="" coords="801,93,949,133"/>
+<area shape="poly" title=" " alt="" coords="552,41,787,90,786,96,551,46"/>
+<area shape="poly" title=" " alt="" coords="330,129,299,136,189,159,75,184,74,179,188,154,298,131,329,123"/>
+<area shape="rect" title=" " alt="" coords="85,181,171,207"/>
+<area shape="poly" title=" " alt="" coords="341,129,178,180,176,175,339,123"/>
+<area shape="rect" title=" " alt="" coords="195,181,264,207"/>
+<area shape="poly" title=" " alt="" coords="356,129,264,177,262,172,353,124"/>
+<area shape="rect" title=" " alt="" coords="288,181,368,207"/>
+<area shape="poly" title=" " alt="" coords="371,128,344,171,340,168,367,125"/>
+<area shape="rect" title=" " alt="" coords="392,181,459,207"/>
+<area shape="poly" title=" " alt="" coords="386,125,413,168,409,171,381,128"/>
+<area shape="poly" title=" " alt="" coords="422,123,454,131,704,178,703,184,453,136,421,129"/>
+<area shape="rect" title=" " alt="" coords="483,181,560,207"/>
+<area shape="poly" title=" " alt="" coords="399,124,489,172,487,177,396,129"/>
+<area shape="rect" href="multiarray_8inl.html" title="This file contains the implementation of the multi&#45;dimensional array class and its associated shape c..." alt="" coords="585,181,693,207"/>
+<area shape="poly" title=" " alt="" coords="415,123,588,175,587,180,413,129"/>
 </map>
 </div>
 </div>
@@ -142,10 +150,14 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmpi__topology_1_1Cartesian.html">mpi_topology::Cartesian&lt; T, NumD &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This strucure provides a MPI Topology <a class="el" href="structmpi__topology_1_1Cartesian.html" title="This strucure provides a MPI Topology Cartesian strucure, combining with resource management.">Cartesian</a> strucure, combining with resource management.  <a href="structmpi__topology_1_1Cartesian.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmpi__array_1_1array__cartesian.html">mpi_array::array_cartesian&lt; T, NumD &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacempi__topology" id="r_namespacempi__topology"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacempi__topology.html">mpi_topology</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacempi__array" id="r_namespacempi__array"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacempi__array.html">mpi_array</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>

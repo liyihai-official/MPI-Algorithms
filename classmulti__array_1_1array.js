@@ -9,6 +9,7 @@ var classmulti__array_1_1array =
     [ "value_type", "classmulti__array_1_1array.html#ab06ee6e6cc134438c657e068f81a484b", null ],
     [ "array", "classmulti__array_1_1array.html#a03732e6d0b1d115e137ed1a996e1414e", null ],
     [ "array", "classmulti__array_1_1array.html#a718b04b3557672cb66dfec06f0e8da45", null ],
+    [ "array", "classmulti__array_1_1array.html#af47dd1e59378fda5253082f3f6e545b3", null ],
     [ "array", "classmulti__array_1_1array.html#a7334ac9b933cca7c96cbe0cec04eb42a", null ],
     [ "array", "classmulti__array_1_1array.html#a55371ac71ebb94fd7552a36f21125c38", null ],
     [ "~array", "classmulti__array_1_1array.html#a34e23dc1db86627657449911e21e029d", null ],

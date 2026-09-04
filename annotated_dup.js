@@ -7,6 +7,9 @@ var annotated_dup =
       [ "mpi_type_traits< int >", "structmpi__algorithm_1_1mpi__type__traits_3_01int_01_4.html", null ],
       [ "mpi_type_traits< long >", "structmpi__algorithm_1_1mpi__type__traits_3_01long_01_4.html", null ]
     ] ],
+    [ "mpi_array", "namespacempi__array.html", [
+      [ "array_cartesian", "classmpi__array_1_1array__cartesian.html", "classmpi__array_1_1array__cartesian" ]
+    ] ],
     [ "mpi_topology", "namespacempi__topology.html", [
       [ "Cartesian", "structmpi__topology_1_1Cartesian.html", "structmpi__topology_1_1Cartesian" ]
     ] ],

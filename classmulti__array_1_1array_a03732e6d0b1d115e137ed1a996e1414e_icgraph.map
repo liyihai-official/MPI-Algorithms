@@ -16,6 +16,8 @@
 <area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="510,281,470,346,442,380,410,409,390,422,387,417,406,405,438,376,466,342,506,278"/>
 <area shape="rect" id="Node000003" href="$structmpi__topology_1_1Cartesian.html#a500a9c04ce02ef2fab1c703e5908d0e4" title="explicit Constructor from a global multiarray_shape" alt="" coords="5,13,185,53"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="220,35,185,35,185,30,220,30"/>
-<area shape="rect" id="Node000010" href="$classmulti__array_1_1array.html#a718b04b3557672cb66dfec06f0e8da45" title="Constructor for the multi&#45;dimensional array class with specified dimensions." alt="" coords="26,419,165,459"/>
-<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="238,442,165,442,165,437,238,437"/>
+<area shape="rect" id="Node000010" href="$classmulti__array_1_1array.html#af47dd1e59378fda5253082f3f6e545b3" title="Constructor for the multi&#45;dimension array class. Constructing from a multi array shape." alt="" coords="26,387,165,427"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="238,430,165,420,165,415,238,425"/>
+<area shape="rect" id="Node000011" href="$classmulti__array_1_1array.html#a718b04b3557672cb66dfec06f0e8da45" title="Constructor for the multi&#45;dimensional array class with specified dimensions." alt="" coords="26,451,165,491"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="238,454,165,464,165,459,238,448"/>
 </map>
