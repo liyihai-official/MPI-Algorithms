@@ -113,7 +113,10 @@ Cartesian<T, NumD>::Cartesian(
   nbr_dest.fill(0);
 
   // MPI_Topology
-  MPI_Dims_create(size, NumD, dims.data());
+  MPI_Dims_create(
+    size,
+    NumD,
+    dims.data());
 
   MPI_Cart_create(
     comm,
@@ -134,8 +137,10 @@ Cartesian<T, NumD>::Cartesian(
       NumD,
       coordinates.data());
 
-    /// @brief A helper Function, provides
-    ///         the decomposition routine.
+    ///
+    /// @brief A helper Function, provides the decomposition
+    ///         routine.
+    ///
     auto Decomp = [](
                     const int n,
                     const int prob_size,
