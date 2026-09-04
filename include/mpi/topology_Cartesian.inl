@@ -97,7 +97,7 @@ Cartesian<T, NumD>::~Cartesian()
 template <typename T, size_t NumD>
 Cartesian<T, NumD>::Cartesian(
   const array_shape& glob_shape,
-  MPI_Comm& comm)
+  MPI_Comm comm)
   : global_shape(glob_shape),
     local_shape(glob_shape)
 {
@@ -107,7 +107,7 @@ Cartesian<T, NumD>::Cartesian(
 
   // Initializing
   dims.fill(0);
-  periods.fill(0);
+  periods.fill(1);  // Turn On Periods of Boundaries
   halos.fill(MPI_DATATYPE_NULL);
   nbr_src.fill(0);
   nbr_dest.fill(0);
@@ -134,7 +134,8 @@ Cartesian<T, NumD>::Cartesian(
       NumD,
       coordinates.data());
 
-    /// @brief Helper Function, provides the decomposition routine.
+    /// @brief A helper Function, provides
+    ///         the decomposition routine.
     auto Decomp = [](
                     const int n,
                     const int prob_size,

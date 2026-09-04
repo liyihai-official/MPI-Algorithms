@@ -61,7 +61,7 @@ struct Cartesian
   ~Cartesian();
 
   // Constructor
-  explicit Cartesian(const array_shape&, MPI_Comm&);
+  explicit Cartesian(const array_shape&, MPI_Comm);
 
 };  // end of struct Cartesian
 }  // end of namespace mpi_topology
