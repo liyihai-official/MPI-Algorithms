@@ -14,7 +14,7 @@
 <area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="495,279,456,313,409,346,385,358,383,353,407,341,453,309,492,275"/>
 <area shape="rect" id="Node000009" href="$classmulti__array_1_1array.html#afc1cd66c80c58a8301d040e7b1ebf596" title="Calculate the total size of the array." alt="" coords="251,419,390,459"/>
 <area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="510,281,470,346,442,380,410,409,390,422,387,417,406,405,438,376,466,342,506,278"/>
-<area shape="rect" id="Node000003" href="$structmpi__topology_1_1Cartesian.html#a3da36dad61104ceabc2d661097cf9798" title="explicit Constructor from a global multiarray_shape" alt="" coords="5,13,185,53"/>
+<area shape="rect" id="Node000003" href="$structmpi__topology_1_1Cartesian.html#a500a9c04ce02ef2fab1c703e5908d0e4" title="explicit Constructor from a global multiarray_shape" alt="" coords="5,13,185,53"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="220,35,185,35,185,30,220,30"/>
 <area shape="rect" id="Node000010" href="$classmulti__array_1_1array.html#a718b04b3557672cb66dfec06f0e8da45" title="Constructor for the multi&#45;dimensional array class with specified dimensions." alt="" coords="26,419,165,459"/>
 <area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="238,442,165,442,165,437,238,437"/>
