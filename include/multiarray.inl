@@ -147,6 +147,19 @@ array<T, NumD>::array(Exts... exts)
   data_ = std::make_unique<T[]>(total_size_);
 }
 
+/// @brief Constructor for the multi-dimension array class.
+///         Constructing from a multi array shape.
+/// @tparam T value type of element.
+/// @tparam NumD Number of dimension.
+/// @param other_shape Constructs from this shape.
+template <typename T, size_t NumD>
+array<T, NumD>::array(const multi_array_shape<NumD>& other_shape)
+  : shape_(other_shape)
+{
+  total_size();
+  data_ = std::make_unique<T[]>(total_size_);
+}
+
 /// @brief Copy constructor for the multi-dimensional array class.
 /// @tparam T The type of the elements in the array.
 /// @tparam NumD Number of dimensions.

@@ -85,6 +85,7 @@ class array
   array() noexcept;
   template <std::integral... Exts>
   explicit array(Exts...);
+  explicit array(const multi_array_shape<NumD>&);
 
   array(const array&) noexcept;
   array(array&&) noexcept;
@@ -93,6 +94,7 @@ class array
   ~array() noexcept = default;
 
   // Interface for MPI
+ public:
   pointer data() noexcept { return data_.get(); }
   const_pointer data() const noexcept { return data_.get(); }
   size_t size() const noexcept { return total_size_; }
@@ -147,8 +149,8 @@ std::ostream& operator<<(
       for (size_t i = 0; i < arr.shape().dims[current_dim]; ++i)
       {
         os << std::fixed
-           << std::setprecision(5)
-           << std::setw(2)
+           << std::setprecision(3)
+           << std::setw(6)
            << arr[offset + i];
       }
       // os << " |\n";
