@@ -433,7 +433,7 @@ USE_MATHJAX            = NO
 
 MATHJAX_VERSION        = MathJax_2
 
-MATHJAX_FORMAT         = HTML-CSS
+MATHJAX_FORMAT         = 
 
 MATHJAX_RELPATH        =
 
