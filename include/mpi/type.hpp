@@ -10,6 +10,8 @@
 #pragma once
 #include <mpi.h>
 
+#include <cstdint>
+
 namespace mpi_type
 {
 
