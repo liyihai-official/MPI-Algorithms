@@ -4,7 +4,7 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="373,33,317,40,256,51,193,70,133,96,109,112,87,132,53,172,48,168,83,128,106,108,131,91,191,64,255,46,317,34,372,28"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="88,181,144,207"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="419,48,335,96,265,136,158,181,156,176,263,131,332,91,417,43"/>
-<area shape="rect" id="Node000004" href="$type_8hpp.html" title=" " alt="" coords="145,101,253,126"/>
+<area shape="rect" id="Node000004" href="$type_8hpp.html" title="get mpi datatypes based on given C datatype." alt="" coords="145,101,253,126"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="397,48,246,99,245,94,396,43"/>
 <area shape="rect" id="Node000005" href="$multiarray_8hpp.html" title="This file provides a multi&#45;dimensional array and its shape templates." alt="" coords="346,101,462,126"/>
 <area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="444,47,420,90,415,87,439,44"/>

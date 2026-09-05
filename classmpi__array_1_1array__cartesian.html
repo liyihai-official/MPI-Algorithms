@@ -99,13 +99,20 @@ $(document).ready(function(){initNavTree('classmpi__array_1_1array__cartesian.ht
 </div><!--header-->
 <div class="contents">
 
+<p>Prividing an array on MPI_Cartesian topological layout.  
+ <a href="classmpi__array_1_1array__cartesian.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="topology__Cartesian_8hpp_source.html">topology_Cartesian.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1a277b038278fe71fd7e6e6726e8974d" id="r_a1a277b038278fe71fd7e6e6726e8974d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmpi__array_1_1array__cartesian.html#a1a277b038278fe71fd7e6e6726e8974d">array_cartesian</a> (const <a class="el" href="structmulti__array_1_1multi__array__shape.html">multi_array::multi_array_shape</a>&lt; NumD &gt; &amp;global_shape, MPI_Comm comm)</td></tr>
 <tr class="separator:a1a277b038278fe71fd7e6e6726e8974d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5a55466e0cea83a6a511fe03d030443" id="r_ae5a55466e0cea83a6a511fe03d030443"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmpi__array_1_1array__cartesian.html#ae5a55466e0cea83a6a511fe03d030443">~array_cartesian</a> ()</td></tr>
+<tr class="memdesc:ae5a55466e0cea83a6a511fe03d030443"><td class="mdescLeft">&#160;</td><td class="mdescRight">deconstructor, free MPI resources  <br /></td></tr>
+<tr class="separator:ae5a55466e0cea83a6a511fe03d030443"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4810412066789fafb860a68250c1488d" id="r_a4810412066789fafb860a68250c1488d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmpi__array_1_1array__cartesian.html#a4810412066789fafb860a68250c1488d">array_cartesian</a> (const <a class="el" href="classmpi__array_1_1array__cartesian.html">array_cartesian</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a4810412066789fafb860a68250c1488d"><td class="mdescLeft">&#160;</td><td class="mdescRight">delete cons and assignment operator.  <br /></td></tr>
 <tr class="separator:a4810412066789fafb860a68250c1488d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeed8033f153f3754d6185db24168f8d2" id="r_aeed8033f153f3754d6185db24168f8d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmpi__array_1_1array__cartesian.html#aeed8033f153f3754d6185db24168f8d2">array_cartesian</a> (<a class="el" href="classmpi__array_1_1array__cartesian.html">array_cartesian</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:aeed8033f153f3754d6185db24168f8d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,14 +120,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad90aa9f285c82226ef0c31dc62361ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a103a1f759ada9375a0b3a18a843e7141" id="r_a103a1f759ada9375a0b3a18a843e7141"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmpi__array_1_1array__cartesian.html">array_cartesian</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmpi__array_1_1array__cartesian.html#a103a1f759ada9375a0b3a18a843e7141">operator=</a> (<a class="el" href="classmpi__array_1_1array__cartesian.html">array_cartesian</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a103a1f759ada9375a0b3a18a843e7141"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5a55466e0cea83a6a511fe03d030443" id="r_ae5a55466e0cea83a6a511fe03d030443"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmpi__array_1_1array__cartesian.html#ae5a55466e0cea83a6a511fe03d030443">~array_cartesian</a> ()</td></tr>
-<tr class="memdesc:ae5a55466e0cea83a6a511fe03d030443"><td class="mdescLeft">&#160;</td><td class="mdescRight">deconstructor, free MPI resources  <br /></td></tr>
-<tr class="separator:ae5a55466e0cea83a6a511fe03d030443"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a025a3e1df1d78338d980fcfc6ebd3021" id="r_a025a3e1df1d78338d980fcfc6ebd3021"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmpi__array_1_1array__cartesian.html#a025a3e1df1d78338d980fcfc6ebd3021">commit_halo_mpi_datatypes</a> ()</td></tr>
+<tr class="memdesc:a025a3e1df1d78338d980fcfc6ebd3021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create &amp; Commit MPI_Datatypes for halo exchanges.  <br /></td></tr>
 <tr class="separator:a025a3e1df1d78338d980fcfc6ebd3021"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a746067e71f55be502e5338686821971c" id="r_a746067e71f55be502e5338686821971c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmpi__array_1_1array__cartesian.html#a746067e71f55be502e5338686821971c">exchange_halos_noneblocking</a> ()</td></tr>
+<tr class="memdesc:a746067e71f55be502e5338686821971c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exchange halos using none-blocking methods by using <code>MPI_Isend</code> &amp; <code>MPI_Irecv</code> .  <br /></td></tr>
 <tr class="separator:a746067e71f55be502e5338686821971c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94879383f0cf9c7f8ba5a3496baf4275" id="r_a94879383f0cf9c7f8ba5a3496baf4275"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmpi__array_1_1array__cartesian.html#a94879383f0cf9c7f8ba5a3496baf4275">exchange_halos_blocking</a> ()</td></tr>
+<tr class="memdesc:a94879383f0cf9c7f8ba5a3496baf4275"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exchange halos using blocking method by using <code>MPI_Sendrecv</code> .  <br /></td></tr>
 <tr class="separator:a94879383f0cf9c7f8ba5a3496baf4275"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -139,7 +146,17 @@ Friends</h2></td></tr>
 <tr class="memdesc:a7556262bc658429e32a92a51a5a9d676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print in order, a friend function of array Cartesian IO.  <br /></td></tr>
 <tr class="separator:a7556262bc658429e32a92a51a5a9d676"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T, size_t NumD&gt;<br />
+class mpi_array::array_cartesian&lt; T, NumD &gt;</div><p>Prividing an array on MPI_Cartesian topological layout. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Value type of array. </td></tr>
+    <tr><td class="paramname">NumD</td><td>Number of dimensions. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1a277b038278fe71fd7e6e6726e8974d" name="a1a277b038278fe71fd7e6e6726e8974d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1a277b038278fe71fd7e6e6726e8974d">&#9670;&#160;</a></span>array_cartesian() <span class="overload">[1/3]</span></h2>
 
@@ -178,6 +195,34 @@ template&lt;typename T , size_t NumD&gt; </div>
 
 </div>
 </div>
+<a id="ae5a55466e0cea83a6a511fe03d030443" name="ae5a55466e0cea83a6a511fe03d030443"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5a55466e0cea83a6a511fe03d030443">&#9670;&#160;</a></span>~array_cartesian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , size_t NumD&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmpi__array_1_1array__cartesian.html">mpi_array::array_cartesian</a>&lt; T, NumD &gt;::~<a class="el" href="classmpi__array_1_1array__cartesian.html">array_cartesian</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>deconstructor, free MPI resources </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Value type </td></tr>
+    <tr><td class="paramname">NumD</td><td>Number of dimensions. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a4810412066789fafb860a68250c1488d" name="a4810412066789fafb860a68250c1488d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4810412066789fafb860a68250c1488d">&#9670;&#160;</a></span>array_cartesian() <span class="overload">[2/3]</span></h2>
 
@@ -203,6 +248,8 @@ template&lt;typename T , size_t NumD&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>delete cons and assignment operator. </p>
 
 </div>
 </div>
@@ -234,34 +281,6 @@ template&lt;typename T , size_t NumD&gt; </div>
 
 </div>
 </div>
-<a id="ae5a55466e0cea83a6a511fe03d030443" name="ae5a55466e0cea83a6a511fe03d030443"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5a55466e0cea83a6a511fe03d030443">&#9670;&#160;</a></span>~array_cartesian()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , size_t NumD&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classmpi__array_1_1array__cartesian.html">mpi_array::array_cartesian</a>&lt; T, NumD &gt;::~<a class="el" href="classmpi__array_1_1array__cartesian.html">array_cartesian</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>deconstructor, free MPI resources </p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>Value type </td></tr>
-    <tr><td class="paramname">NumD</td><td>Number of dimensions. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a025a3e1df1d78338d980fcfc6ebd3021" name="a025a3e1df1d78338d980fcfc6ebd3021"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a025a3e1df1d78338d980fcfc6ebd3021">&#9670;&#160;</a></span>commit_halo_mpi_datatypes()</h2>
@@ -288,6 +307,16 @@ template&lt;typename T , size_t NumD&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Create &amp; Commit MPI_Datatypes for halo exchanges. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>element datatype </td></tr>
+    <tr><td class="paramname">NumD</td><td>Number of dimension of array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This function uses <code>MPI_Type_create_subarray</code> to create datatype for halo exchanges. </dd></dl>
+
 </div>
 </div>
 <a id="a94879383f0cf9c7f8ba5a3496baf4275" name="a94879383f0cf9c7f8ba5a3496baf4275"></a>
@@ -307,6 +336,15 @@ template&lt;typename T , size_t NumD&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Exchange halos using blocking method by using <code>MPI_Sendrecv</code> . </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>element datatype </td></tr>
+    <tr><td class="paramname">NumD</td><td>number of array dimensions. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a746067e71f55be502e5338686821971c" name="a746067e71f55be502e5338686821971c"></a>
@@ -325,6 +363,15 @@ template&lt;typename T , size_t NumD&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Exchange halos using none-blocking methods by using <code>MPI_Isend</code> &amp; <code>MPI_Irecv</code> . </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>element datatype </td></tr>
+    <tr><td class="paramname">NumD</td><td>number of array dimensions. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -1,9 +1,9 @@
 var classmpi__array_1_1array__cartesian =
 [
     [ "array_cartesian", "classmpi__array_1_1array__cartesian.html#a1a277b038278fe71fd7e6e6726e8974d", null ],
+    [ "~array_cartesian", "classmpi__array_1_1array__cartesian.html#ae5a55466e0cea83a6a511fe03d030443", null ],
     [ "array_cartesian", "classmpi__array_1_1array__cartesian.html#a4810412066789fafb860a68250c1488d", null ],
     [ "array_cartesian", "classmpi__array_1_1array__cartesian.html#aeed8033f153f3754d6185db24168f8d2", null ],
-    [ "~array_cartesian", "classmpi__array_1_1array__cartesian.html#ae5a55466e0cea83a6a511fe03d030443", null ],
     [ "commit_halo_mpi_datatypes", "classmpi__array_1_1array__cartesian.html#a025a3e1df1d78338d980fcfc6ebd3021", null ],
     [ "exchange_halos_blocking", "classmpi__array_1_1array__cartesian.html#a94879383f0cf9c7f8ba5a3496baf4275", null ],
     [ "exchange_halos_noneblocking", "classmpi__array_1_1array__cartesian.html#a746067e71f55be502e5338686821971c", null ],

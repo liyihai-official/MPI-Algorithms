@@ -1,5 +1,7 @@
 <map id="multi_array::array::data" name="multi_array::array::data">
-<area shape="rect" id="Node000001" title=" " alt="" coords="223,5,361,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="223,37,361,77"/>
 <area shape="rect" id="Node000002" href="$namespacempi__algorithm.html#a5f4db94e91d99d00ce6b9808c7370a5c" title="Bruck&#39;s All&#45;to&#45;All communication algorithm using non&#45;blocking MPI calls." alt="" coords="5,5,175,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,28,175,28,175,23,209,23"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,47,175,41,175,36,210,42"/>
+<area shape="rect" id="Node000003" href="$namespacempi__io.html#a6789d78447c776ae7e780341cad3f4a0" title="Write Cartesian distributed array to file in binary using MPI&#45;IO MPI_File_write_all ." alt="" coords="11,69,169,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="210,73,170,79,169,74,209,68"/>
 </map>
