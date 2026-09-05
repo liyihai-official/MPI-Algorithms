@@ -33,7 +33,6 @@ struct mpi_type_traits<int>
 {
   static MPI_Datatype get() { return MPI_INT; }
 };
-template <>
 
 template <>
 struct mpi_type_traits<long>
@@ -41,6 +40,7 @@ struct mpi_type_traits<long>
   static MPI_Datatype get() { return MPI_LONG; }
 };
 
+template <>
 struct mpi_type_traits<float>
 {
   static MPI_Datatype get() { return MPI_FLOAT; }
