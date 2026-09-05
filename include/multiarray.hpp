@@ -149,7 +149,7 @@ std::ostream& operator<<(
       for (size_t i = 0; i < arr.shape().dims[current_dim]; ++i)
       {
         os << std::fixed
-           << std::setprecision(3)
+           << std::setprecision(0)
            << std::setw(6)
            << arr[offset + i];
       }
