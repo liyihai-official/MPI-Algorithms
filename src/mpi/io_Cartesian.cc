@@ -108,6 +108,8 @@ void write_array_Cartesian_io_binary(
 
 /// Explicit template instantiation corresponding to mpi_type_traits
 
+// 2D instantiation
+
 template void mpi_io::write_array_Cartesian_io_binary<uint8_t, 2ul>(
   const mpi_array::array_cartesian<uint8_t, 2ul>&,
   const std::string&);
@@ -130,4 +132,30 @@ template void mpi_io::write_array_Cartesian_io_binary<double, 2ul>(
 
 template void mpi_io::write_array_Cartesian_io_binary<long, 2ul>(
   const mpi_array::array_cartesian<long, 2ul>&,
+  const std::string&);
+
+// 3D instantiation
+
+template void mpi_io::write_array_Cartesian_io_binary<uint8_t, 3ul>(
+  const mpi_array::array_cartesian<uint8_t, 3ul>&,
+  const std::string&);
+
+template void mpi_io::write_array_Cartesian_io_binary<uint16_t, 3ul>(
+  const mpi_array::array_cartesian<uint16_t, 3ul>&,
+  const std::string&);
+
+template void mpi_io::write_array_Cartesian_io_binary<int, 3ul>(
+  const mpi_array::array_cartesian<int, 3ul>&,
+  const std::string&);
+
+template void mpi_io::write_array_Cartesian_io_binary<float, 3ul>(
+  const mpi_array::array_cartesian<float, 3ul>&,
+  const std::string&);
+
+template void mpi_io::write_array_Cartesian_io_binary<double, 3ul>(
+  const mpi_array::array_cartesian<double, 3ul>&,
+  const std::string&);
+
+template void mpi_io::write_array_Cartesian_io_binary<long, 3ul>(
+  const mpi_array::array_cartesian<long, 3ul>&,
   const std::string&);
