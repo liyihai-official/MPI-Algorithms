@@ -22,6 +22,7 @@ add_executable(
 add_executable(
   conways-game
   conways.cc
+  include/mpi/io_Cartesian.cc
 )
 
 # -L Link lib
