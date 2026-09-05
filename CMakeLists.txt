@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 project(BruckAlgorithm)
 
+set(PROJECT_AUTHOR "Yihai Li")
+
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -20,14 +22,21 @@ add_executable(
 )
 
 add_executable(
-  conways-game
+  conways-game-2D
   conway2D.cc
+  src/mpi/io_Cartesian.cc
+)
+
+add_executable(
+  conways-game-3D
+  conway3D.cc
   src/mpi/io_Cartesian.cc
 )
 
 # -L Link lib
 target_link_libraries(bruck_algorithm PRIVATE MPI::MPI_CXX)
-target_link_libraries(conways-game PRIVATE MPI::MPI_CXX)
+target_link_libraries(conways-game-2D PRIVATE MPI::MPI_CXX)
+target_link_libraries(conways-game-3D PRIVATE MPI::MPI_CXX)
 
 # -I include directories
 target_include_directories(
@@ -38,7 +47,13 @@ target_include_directories(
 
 # -I include directories
 target_include_directories(
-  conways-game PRIVATE
+  conways-game-2D PRIVATE
+  ${MPI_INCLUDE_PATH}
+  ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
+target_include_directories(
+  conways-game-3D PRIVATE
   ${MPI_INCLUDE_PATH}
   ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
