@@ -9,35 +9,13 @@
 
 #include <cstring>
 
+#include "mpi/type.hpp"
 #include "multiarray.hpp"
 #include "randin.hpp"
 
 /// @brief Namespace for MPI communication algorithms.
 namespace mpi_algorithm
 {
-template <typename T>
-struct mpi_type_traits;
-
-template <>
-struct mpi_type_traits<int>
-{
-  static MPI_Datatype get() { return MPI_INT; }
-};
-template <>
-struct mpi_type_traits<float>
-{
-  static MPI_Datatype get() { return MPI_FLOAT; }
-};
-template <>
-struct mpi_type_traits<double>
-{
-  static MPI_Datatype get() { return MPI_DOUBLE; }
-};
-template <>
-struct mpi_type_traits<long>
-{
-  static MPI_Datatype get() { return MPI_LONG; }
-};
 
 ///
 /// @brief Bruck's All-to-All communication algorithm using non-blocking MPI calls.
@@ -56,7 +34,7 @@ void Bruck_Alltoall_noneblocking(
   int rank, num_procs;
   MPI_Comm_rank(comm, &rank);
   MPI_Comm_size(comm, &num_procs);
-  MPI_Datatype base_type = mpi_type_traits<T>::get();
+  MPI_Datatype base_type = mpi_type::mpi_type_traits<T>::get();
 
   size_t total_elements{send_arr.size()};
   size_t elements_per_proc{total_elements / num_procs};
