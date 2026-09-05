@@ -12,6 +12,7 @@
 
 namespace mpi_type
 {
+
 template <typename T>
 struct mpi_type_traits;
 
@@ -33,19 +34,22 @@ struct mpi_type_traits<int>
   static MPI_Datatype get() { return MPI_INT; }
 };
 template <>
-struct mpi_type_traits<float>
-{
-  static MPI_Datatype get() { return MPI_FLOAT; }
-};
-template <>
-struct mpi_type_traits<double>
-{
-  static MPI_Datatype get() { return MPI_DOUBLE; }
-};
+
 template <>
 struct mpi_type_traits<long>
 {
   static MPI_Datatype get() { return MPI_LONG; }
+};
+
+struct mpi_type_traits<float>
+{
+  static MPI_Datatype get() { return MPI_FLOAT; }
+};
+
+template <>
+struct mpi_type_traits<double>
+{
+  static MPI_Datatype get() { return MPI_DOUBLE; }
 };
 
 }  // end of namespace mpi_type
