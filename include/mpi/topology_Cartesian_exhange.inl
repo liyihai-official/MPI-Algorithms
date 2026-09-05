@@ -1,18 +1,29 @@
 ///
 /// @file topology_Cartesian_exchange.inl
-///
+/// @brief Provides exchange halos methods for Cartesian array,
+///        and other required method including MPI_Datatype.
+/// @date Sept 4. 2026
+/// @author Yihai Li
 ///
 
 namespace mpi_array
 {
 
+///
+/// @brief Create & Commit MPI_Datatypes for halo exchanges.
+/// @tparam T element datatype
+/// @tparam NumD Number of dimension of array.
+/// @note This function uses @c MPI_Type_create_subarray to
+///       create datatype for halo exchanges.
+///
 template <typename T, size_t NumD>
 inline void array_cartesian<T, NumD>::commit_halo_mpi_datatypes()
 {
   // Prepare for MPI_Type_create_subarray usage.
-  std::array<int, NumD> array_size{};
-  std::array<int, NumD> array_subsize{};
-  std::array<int, NumD> array_starts{};
+  std::array<int, NumD>
+    array_size{},
+    array_subsize{},
+    array_starts{};
 
   for (size_t i = 0; i < NumD; ++i)
   {
@@ -29,23 +40,30 @@ inline void array_cartesian<T, NumD>::commit_halo_mpi_datatypes()
 
     MPI_Type_create_subarray(
       NumD,
-      array_size.data(),
-      array_subsize.data(),
-      array_starts.data(),
+      array_size.data(),     // number of elements of the full array
+      array_subsize.data(),  // number of elements of the subarray
+      array_starts.data(),   // starting coordinates in each dimension
       MPI_ORDER_C,
-      mpi_type::mpi_type_traits<T>::get(),
+      mpi_type::mpi_type_traits<T>::get(),  // element datatype
       &topology.halos[i]);
 
     MPI_Type_commit(&topology.halos[i]);
   }
 }
 
+///
+/// @brief Exchange halos using none-blocking methods by using
+///         @c MPI_Isend & @c MPI_Irecv .
+///
+/// @tparam T element datatype
+/// @tparam NumD number of array dimensions.
+///
 template <typename T, size_t NumD>
 void array_cartesian<T, NumD>::exchange_halos_noneblocking()
 {
   for (size_t d = 0; d < NumD; ++d)
   {
-    int
+    int  // left (src) and recv (dest)
       left_rank{topology.nbr_src[d]},
       right_rank{topology.nbr_dest[d]};
 
@@ -63,6 +81,7 @@ void array_cartesian<T, NumD>::exchange_halos_noneblocking()
     MPI_Request requests[4]{};
     int req_count{0};
 
+    // receive before sending
     if (right_rank != MPI_PROC_NULL)
       MPI_Irecv(
         &current_data[recv_right_idx],
@@ -83,6 +102,7 @@ void array_cartesian<T, NumD>::exchange_halos_noneblocking()
         topology.comm_cart,
         &requests[req_count++]);
 
+    // send
     if (left_rank != MPI_PROC_NULL)
       MPI_Isend(
         &current_data[send_left_idx],
@@ -111,12 +131,19 @@ void array_cartesian<T, NumD>::exchange_halos_noneblocking()
   }
 }
 
+///
+/// @brief Exchange halos using blocking method by using
+///         @c MPI_Sendrecv .
+///
+/// @tparam T element datatype
+/// @tparam NumD number of array dimensions.
+///
 template <typename T, size_t NumD>
 void array_cartesian<T, NumD>::exchange_halos_blocking()
 {
   for (size_t d = 0; d < NumD; ++d)
   {
-    int
+    int  // left (src) and recv (dest)
       left_rank{topology.nbr_src[d]},
       right_rank{topology.nbr_dest[d]};
 
@@ -131,6 +158,8 @@ void array_cartesian<T, NumD>::exchange_halos_blocking()
       send_right_idx{(dim_size - 2) * stride},
       recv_left_idx{0 * stride};
 
+    // Send to left (src) and recv (dest) from right
+    //  in each dimension.
     MPI_Sendrecv(
       &current_data[send_left_idx],
       1,
@@ -145,6 +174,8 @@ void array_cartesian<T, NumD>::exchange_halos_blocking()
       topology.comm_cart,
       MPI_STATUS_IGNORE);
 
+    // Send to right (src) and recv (dest) from left
+    //  in each dimension.
     MPI_Sendrecv(
       &current_data[send_right_idx],
       1,
