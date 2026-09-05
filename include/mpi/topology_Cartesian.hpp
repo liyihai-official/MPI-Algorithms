@@ -91,6 +91,11 @@ struct Cartesian
 namespace mpi_array
 {
 
+///
+/// @brief Prividing an array on MPI_Cartesian topological layout.
+/// @tparam T Value type of array.
+/// @tparam NumD Number of dimensions.
+///
 template <typename T, size_t NumD>
 class array_cartesian
 {
@@ -109,19 +114,15 @@ class array_cartesian
                      next_data(topology.local_shape)
   {
   }
+  ~array_cartesian();
 
+ public:
+  /// delete cons and assignment operator.
   array_cartesian(const array_cartesian&) = delete;
   array_cartesian(array_cartesian&&) = delete;
 
   array_cartesian& operator=(const array_cartesian&) = delete;
   array_cartesian& operator=(array_cartesian&&) = delete;
-
-  ~array_cartesian();
-
-  // friend function
- public:
-  template <class _T, size_t _NumD>
-  friend std::ostream& operator<<(std::ostream&, const array_cartesian<_T, _NumD>&);
 
   // Communication Methods
  public:
@@ -130,6 +131,11 @@ class array_cartesian
   void exchange_halos_blocking();
 
  private:
+  // friend function
+ public:
+  template <class _T, size_t _NumD>
+  friend std::ostream& operator<<(std::ostream&, const array_cartesian<_T, _NumD>&);
+
 };  // end of class array_cartesian
 }  // end of namespace mpi_array
 
