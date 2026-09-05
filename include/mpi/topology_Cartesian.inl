@@ -182,7 +182,7 @@ Cartesian<T, NumD>::Cartesian(
     }
 
     local_shape.compute_strides();
-  }
+  }  // end of if (comm_cart != MPI_COMM_NULL)
 }
 
 }  // namespace mpi_topology

@@ -18,6 +18,7 @@
 
 #include <array>
 
+#include "mpi/type.hpp"
 #include "multiarray.hpp"
 
 /*
@@ -123,8 +124,10 @@ class array_cartesian
   friend std::ostream& operator<<(std::ostream&, const array_cartesian<_T, _NumD>&);
 
   // Communication Methods
- private:
+ public:
+  void commit_halo_mpi_datatypes();
   void exchange_halos_noneblocking();
+  void exchange_halos_blocking();
 
  private:
 };  // end of class array_cartesian
