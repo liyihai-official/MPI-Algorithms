@@ -43,7 +43,7 @@ void Bruck_Alltoall_noneblocking(
   T* recv_data{recv_arr.data()};
 
   // Local data rotation
-  for (size_t j = 0; j < num_procs; ++j)
+  for (int j = 0; j < num_procs; ++j)
   {
     int dest_rank{static_cast<int>((j - rank + num_procs) % num_procs)};
     std::memcpy(
