@@ -1,6 +1,6 @@
 ///
-///
-///
+/// @file type.hpp
+/// @brief get mpi datatypes based on given C datatype.
 ///
 ///
 
