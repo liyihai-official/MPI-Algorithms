@@ -1,59 +1,49 @@
-cmake_minimum_required(VERSION 3.10)
-project(BruckAlgorithm)
+cmake_minimum_required(VERSION 3.15)
+project(BruckAlgorithm LANGUAGES CXX)
 
 set(PROJECT_AUTHOR "Yihai Li")
-
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 
 if(NOT CMAKE_BUILD_TYPE)
   message(STATUS "No build type selected, defaulting to Release")
   set(CMAKE_BUILD_TYPE Release)
 endif()
 
-# Package dependencies
 find_package(MPI REQUIRED)
 
-# Add EXEC
-add_executable(
+# 1. INTERFACE Library)
+add_library(common_settings INTERFACE)
+target_compile_features(common_settings INTERFACE cxx_std_20)
+
+
+# Public include
+target_include_directories(common_settings INTERFACE
+  ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
+# Warning error
+if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+  target_compile_options(common_settings INTERFACE
+    -Wall
+    -Wextra
+    -Wpedantic
+    -Werror 
+  )
+endif()
+
+# Execs
+add_executable(bruck_algorithm main.cc)
+add_executable(conways-game-2D conway2D.cc src/mpi/io_Cartesian.cc)
+add_executable(conways-game-3D conway3D.cc src/mpi/io_Cartesian.cc)
+
+# linkings
+set(EXECUTABLES 
   bruck_algorithm 
-  main.cc
-)
-
-add_executable(
-  conways-game-2D
-  conway2D.cc
-  src/mpi/io_Cartesian.cc
-)
-
-add_executable(
+  conways-game-2D 
   conways-game-3D
-  conway3D.cc
-  src/mpi/io_Cartesian.cc
 )
 
-# -L Link lib
-target_link_libraries(bruck_algorithm PRIVATE MPI::MPI_CXX)
-target_link_libraries(conways-game-2D PRIVATE MPI::MPI_CXX)
-target_link_libraries(conways-game-3D PRIVATE MPI::MPI_CXX)
-
-# -I include directories
-target_include_directories(
-  bruck_algorithm PRIVATE
-  ${MPI_INCLUDE_PATH}
-  ${CMAKE_CURRENT_SOURCE_DIR}/include
-)
-
-# -I include directories
-target_include_directories(
-  conways-game-2D PRIVATE
-  ${MPI_INCLUDE_PATH}
-  ${CMAKE_CURRENT_SOURCE_DIR}/include
-)
-
-target_include_directories(
-  conways-game-3D PRIVATE
-  ${MPI_INCLUDE_PATH}
-  ${CMAKE_CURRENT_SOURCE_DIR}/include
-)
+foreach(EXEC IN LISTS EXECUTABLES)
+  target_link_libraries(${EXEC} PRIVATE common_settings MPI::MPI_CXX)
+endforeach()
