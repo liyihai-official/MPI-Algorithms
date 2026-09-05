@@ -20,8 +20,21 @@
 #include "randin.hpp"  // Integrated randomizer class
 
 constexpr int SEED{2027}, NUM_GENERATION{100};
-constexpr size_t DIMENSIONS{3}, DIM_X{30}, DIM_Y{30}, DIM_Z{30};
-typedef uint8_t ELEMENT_TYPE;
+constexpr size_t DIMENSIONS{3};
+// typedef uint8_t ELEMENT_TYPE;
+
+/// Problem Size + Boundaries
+#if !defined(DIM_X) || !defined(DIM_Y) || !defined(DIM_Z)
+#define DIM_X 124
+#define DIM_Y 124
+#define DIM_Z 124
+#endif
+
+#if !defined(ELEMENT_TYPE_MACRO)
+#define ELEMENT_TYPE_MACRO uint8_t
+#endif
+
+using ELEMENT_TYPE = ELEMENT_TYPE_MACRO;
 
 void evolve(mpi_array::array_cartesian<ELEMENT_TYPE, DIMENSIONS>&);
 

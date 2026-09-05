@@ -44,6 +44,20 @@ set(EXECUTABLES
   conways-game-3D
 )
 
+set(DIM_X 124 CACHE STRING "X dimension for Conway's Game")
+set(DIM_Y 124 CACHE STRING "Y dimension for Conway's Game")
+set(DIM_Z 124 CACHE STRING "Z dimension for Conway's Game")
+
+set(DATA_TYPE "uint8_t" CACHE STRING "Datatype for elements in Conway's Game")
+
+
+target_compile_definitions(common_settings INTERFACE
+  DIM_X=${DIM_X}
+  DIM_Y=${DIM_Y}
+  DIM_Z=${DIM_Z}
+  ELEMENT_TYPE_MACRO=${DATA_TYPE}
+)
+
 foreach(EXEC IN LISTS EXECUTABLES)
   target_link_libraries(${EXEC} PRIVATE common_settings MPI::MPI_CXX)
 endforeach()
