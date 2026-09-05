@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iterator_0',['iterator',['../classmulti__array_1_1array.html#a186bbdf8008f560009025396d87d8be9',1,'multi_array::array']]]
+  ['element_5ftype_0',['element_type',['../conway2D_8cc.html#a7da0db7da75ae1ba45907f96296a7724',1,'ELEMENT_TYPE:&#160;conway2D.cc'],['../conway3D_8cc.html#a7da0db7da75ae1ba45907f96296a7724',1,'ELEMENT_TYPE:&#160;conway3D.cc']]]
 ];

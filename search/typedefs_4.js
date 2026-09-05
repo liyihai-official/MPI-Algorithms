@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pointer_0',['pointer',['../classmulti__array_1_1array.html#a2bda08d215c1d080438c0318730c841e',1,'multi_array::array']]]
+  ['iterator_0',['iterator',['../classmulti__array_1_1array.html#a186bbdf8008f560009025396d87d8be9',1,'multi_array::array']]]
 ];
