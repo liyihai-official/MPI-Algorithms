@@ -148,9 +148,9 @@ $(document).ready(function(){initNavTree('topology__Cartesian_8inl_source.html',
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    nbr_dest(std::move(other.nbr_dest));</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    coordinates(std::move(other.coordinates));</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    halos(std::move(other.halos));</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    rank(std::move(other.rank));</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    size(std::move(other.size));</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    comm_cart(other.comm_cart);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    rank = std::move(other.rank);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    size = std::move(other.size);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    comm_cart = other.comm_cart;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    other.comm_cart = MPI_COMM_NULL;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    other.rank = -1;</div>
