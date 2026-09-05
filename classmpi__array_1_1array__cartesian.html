@@ -93,7 +93,6 @@ $(document).ready(function(){initNavTree('classmpi__array_1_1array__cartesian.ht
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classmpi__array_1_1array__cartesian-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">mpi_array::array_cartesian&lt; T, NumD &gt; Class Template Reference</div></div>
@@ -117,6 +116,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae5a55466e0cea83a6a511fe03d030443" id="r_ae5a55466e0cea83a6a511fe03d030443"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmpi__array_1_1array__cartesian.html#ae5a55466e0cea83a6a511fe03d030443">~array_cartesian</a> ()</td></tr>
 <tr class="memdesc:ae5a55466e0cea83a6a511fe03d030443"><td class="mdescLeft">&#160;</td><td class="mdescRight">deconstructor, free MPI resources  <br /></td></tr>
 <tr class="separator:ae5a55466e0cea83a6a511fe03d030443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a025a3e1df1d78338d980fcfc6ebd3021" id="r_a025a3e1df1d78338d980fcfc6ebd3021"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmpi__array_1_1array__cartesian.html#a025a3e1df1d78338d980fcfc6ebd3021">commit_halo_mpi_datatypes</a> ()</td></tr>
+<tr class="separator:a025a3e1df1d78338d980fcfc6ebd3021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a746067e71f55be502e5338686821971c" id="r_a746067e71f55be502e5338686821971c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmpi__array_1_1array__cartesian.html#a746067e71f55be502e5338686821971c">exchange_halos_noneblocking</a> ()</td></tr>
+<tr class="separator:a746067e71f55be502e5338686821971c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94879383f0cf9c7f8ba5a3496baf4275" id="r_a94879383f0cf9c7f8ba5a3496baf4275"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmpi__array_1_1array__cartesian.html#a94879383f0cf9c7f8ba5a3496baf4275">exchange_halos_blocking</a> ()</td></tr>
+<tr class="separator:a94879383f0cf9c7f8ba5a3496baf4275"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -126,11 +131,6 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a848d0312f84be4bbeba987777bf05054"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99c518c710479cca2b660d6900e18975" id="r_a99c518c710479cca2b660d6900e18975"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmulti__array_1_1array.html">multi_array::array</a>&lt; T, NumD &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmpi__array_1_1array__cartesian.html#a99c518c710479cca2b660d6900e18975">next_data</a> {}</td></tr>
 <tr class="separator:a99c518c710479cca2b660d6900e18975"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a746067e71f55be502e5338686821971c" id="r_a746067e71f55be502e5338686821971c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmpi__array_1_1array__cartesian.html#a746067e71f55be502e5338686821971c">exchange_halos_noneblocking</a> ()</td></tr>
-<tr class="separator:a746067e71f55be502e5338686821971c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -263,8 +263,8 @@ template&lt;typename T , size_t NumD&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a746067e71f55be502e5338686821971c" name="a746067e71f55be502e5338686821971c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a746067e71f55be502e5338686821971c">&#9670;&#160;</a></span>exchange_halos_noneblocking()</h2>
+<a id="a025a3e1df1d78338d980fcfc6ebd3021" name="a025a3e1df1d78338d980fcfc6ebd3021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a025a3e1df1d78338d980fcfc6ebd3021">&#9670;&#160;</a></span>commit_halo_mpi_datatypes()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -275,7 +275,7 @@ template&lt;typename T , size_t NumD&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classmpi__array_1_1array__cartesian.html">mpi_array::array_cartesian</a>&lt; T, NumD &gt;::exchange_halos_noneblocking </td>
+          <td class="memname">void <a class="el" href="classmpi__array_1_1array__cartesian.html">mpi_array::array_cartesian</a>&lt; T, NumD &gt;::commit_halo_mpi_datatypes </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -283,9 +283,47 @@ template&lt;typename T , size_t NumD&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94879383f0cf9c7f8ba5a3496baf4275" name="a94879383f0cf9c7f8ba5a3496baf4275"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94879383f0cf9c7f8ba5a3496baf4275">&#9670;&#160;</a></span>exchange_halos_blocking()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , size_t NumD&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmpi__array_1_1array__cartesian.html">mpi_array::array_cartesian</a>&lt; T, NumD &gt;::exchange_halos_blocking </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a746067e71f55be502e5338686821971c" name="a746067e71f55be502e5338686821971c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a746067e71f55be502e5338686821971c">&#9670;&#160;</a></span>exchange_halos_noneblocking()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , size_t NumD&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classmpi__array_1_1array__cartesian.html">mpi_array::array_cartesian</a>&lt; T, NumD &gt;::exchange_halos_noneblocking </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 </div>
@@ -466,6 +504,7 @@ template&lt;typename T , size_t NumD&gt; </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/mpi/<a class="el" href="topology__Cartesian_8hpp_source.html">topology_Cartesian.hpp</a></li>
 <li>include/mpi/<a class="el" href="topology__Cartesian_8inl_source.html">topology_Cartesian.inl</a></li>
+<li>include/mpi/<a class="el" href="topology__Cartesian__exhange_8inl_source.html">topology_Cartesian_exhange.inl</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
