@@ -91,7 +91,6 @@ $(document).ready(function(){initNavTree('bruck_8cc.html',''); initResizable(); 
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">bruck.cc File Reference</div></div>
@@ -102,6 +101,7 @@ $(document).ready(function(){initNavTree('bruck_8cc.html',''); initResizable(); 
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;mpi.h&gt;</code><br />
 <code>#include &lt;cstring&gt;</code><br />
+<code>#include &quot;<a class="el" href="type_8hpp_source.html">mpi/type.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="multiarray_8hpp_source.html">multiarray.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="randin_8hpp_source.html">randin.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -109,56 +109,48 @@ Include dependency graph for bruck.cc:</div>
 <div class="dyncontent">
 <div class="center"><img src="bruck_8cc__incl.png" border="0" usemap="#asrc_2bruck_8cc" alt=""/></div>
 <map name="asrc_2bruck_8cc" id="asrc_2bruck_8cc">
-<area shape="rect" title="The implementation of the Bruck algorithm demonstration." alt="" coords="327,5,425,31"/>
-<area shape="rect" title=" " alt="" coords="225,79,284,104"/>
-<area shape="poly" title=" " alt="" coords="358,33,287,74,285,69,355,28"/>
-<area shape="rect" title=" " alt="" coords="308,79,375,104"/>
-<area shape="poly" title=" " alt="" coords="373,32,355,67,351,65,368,30"/>
-<area shape="rect" href="multiarray_8hpp.html" title="This file provides a multi&#45;dimensional array and its shape templates." alt="" coords="293,152,409,177"/>
-<area shape="poly" title=" " alt="" coords="383,30,391,64,392,84,389,105,371,142,366,140,384,103,387,84,386,65,378,32"/>
-<area shape="rect" href="randin_8hpp.html" title=" " alt="" coords="563,79,653,104"/>
-<area shape="poly" title=" " alt="" coords="414,28,558,72,557,77,412,33"/>
-<area shape="rect" title=" " alt="" coords="617,225,703,251"/>
-<area shape="poly" title=" " alt="" coords="401,175,604,221,603,226,400,180"/>
+<area shape="rect" title="The implementation of the Bruck algorithm demonstration." alt="" coords="447,5,545,31"/>
+<area shape="rect" title=" " alt="" coords="336,152,395,177"/>
+<area shape="poly" title=" " alt="" coords="487,33,387,143,383,140,483,29"/>
+<area shape="rect" title=" " alt="" coords="463,79,529,104"/>
+<area shape="poly" title=" " alt="" coords="499,31,499,65,493,65,493,31"/>
+<area shape="rect" href="type_8hpp.html" title="get mpi datatypes based on given C datatype." alt="" coords="279,79,387,104"/>
+<area shape="poly" title=" " alt="" coords="471,33,374,75,371,71,469,28"/>
+<area shape="rect" href="multiarray_8hpp.html" title="This file provides a multi&#45;dimensional array and its shape templates." alt="" coords="435,152,551,177"/>
+<area shape="poly" title=" " alt="" coords="511,29,538,62,545,83,544,105,533,126,519,143,515,140,529,123,539,103,540,84,533,64,507,33"/>
+<area shape="rect" href="randin_8hpp.html" title=" " alt="" coords="612,79,703,104"/>
+<area shape="poly" title=" " alt="" coords="523,28,620,71,617,75,521,33"/>
+<area shape="poly" title=" " alt="" coords="341,103,357,139,352,141,336,105"/>
+<area shape="rect" title=" " alt="" coords="603,225,688,251"/>
+<area shape="poly" title=" " alt="" coords="519,175,609,217,607,222,517,180"/>
 <area shape="rect" title=" " alt="" coords="240,225,296,251"/>
-<area shape="poly" title=" " alt="" coords="339,179,294,218,290,214,336,175"/>
+<area shape="poly" title=" " alt="" coords="458,180,310,226,308,221,456,175"/>
 <area shape="rect" title=" " alt="" coords="320,225,389,251"/>
-<area shape="poly" title=" " alt="" coords="354,178,356,212,351,212,349,178"/>
-<area shape="rect" title=" " alt="" coords="735,225,815,251"/>
-<area shape="poly" title=" " alt="" coords="409,173,715,223,721,224,720,229,714,228,409,178"/>
+<area shape="poly" title=" " alt="" coords="472,180,391,221,388,217,470,175"/>
+<area shape="rect" title=" " alt="" coords="712,225,792,251"/>
+<area shape="poly" title=" " alt="" coords="536,175,699,220,698,225,534,180"/>
 <area shape="rect" title=" " alt="" coords="413,225,480,251"/>
-<area shape="poly" title=" " alt="" coords="368,175,421,215,418,219,365,180"/>
+<area shape="poly" title=" " alt="" coords="488,179,464,215,460,212,483,176"/>
 <area shape="rect" title=" " alt="" coords="504,225,579,251"/>
-<area shape="poly" title=" " alt="" coords="382,175,498,218,496,223,380,180"/>
+<area shape="poly" title=" " alt="" coords="503,176,528,213,524,216,499,179"/>
 <area shape="rect" title=" " alt="" coords="5,225,83,251"/>
-<area shape="poly" title=" " alt="" coords="302,180,97,227,95,222,301,175"/>
+<area shape="poly" title=" " alt="" coords="436,177,96,228,96,223,435,171"/>
 <area shape="rect" href="multiarray_8inl.html" title="This file contains the implementation of the multi&#45;dimensional array class and its associated shape c..." alt="" coords="107,225,215,251"/>
-<area shape="poly" title=" " alt="" coords="321,180,206,223,204,218,319,175"/>
-<area shape="poly" title=" " alt="" coords="567,107,406,151,405,146,566,101"/>
-<area shape="poly" title=" " alt="" coords="643,102,677,121,693,134,705,151,709,168,705,186,685,217,681,214,701,184,704,168,700,153,689,138,674,125,641,106"/>
-<area shape="poly" title=" " alt="" coords="642,102,684,121,724,150,749,180,766,211,762,214,745,183,721,154,681,126,640,107"/>
-<area shape="rect" title=" " alt="" coords="816,152,888,177"/>
-<area shape="poly" title=" " alt="" coords="648,101,804,147,802,152,646,107"/>
-<area shape="rect" title=" " alt="" coords="433,152,487,177"/>
-<area shape="poly" title=" " alt="" coords="585,106,498,148,495,144,583,102"/>
-<area shape="rect" title=" " alt="" coords="511,152,603,177"/>
-<area shape="poly" title=" " alt="" coords="602,106,576,142,571,139,597,103"/>
-<area shape="rect" title=" " alt="" coords="627,152,690,177"/>
-<area shape="poly" title=" " alt="" coords="619,103,645,139,640,142,614,106"/>
+<area shape="poly" title=" " alt="" coords="441,180,229,225,228,220,439,175"/>
+<area shape="poly" title=" " alt="" coords="632,106,534,149,531,144,630,102"/>
+<area shape="poly" title=" " alt="" coords="652,106,641,127,632,152,631,183,638,212,633,213,626,184,627,152,636,125,648,103"/>
+<area shape="poly" title=" " alt="" coords="660,104,662,138,667,158,676,176,695,198,719,216,715,220,691,202,671,179,662,159,657,139,654,104"/>
+<area shape="rect" title=" " alt="" coords="685,152,757,177"/>
+<area shape="poly" title=" " alt="" coords="670,103,704,140,700,144,666,106"/>
+<area shape="rect" title=" " alt="" coords="781,152,835,177"/>
+<area shape="poly" title=" " alt="" coords="683,102,772,144,770,148,680,106"/>
+<area shape="rect" title=" " alt="" coords="859,152,951,177"/>
+<area shape="poly" title=" " alt="" coords="698,101,853,146,851,151,696,107"/>
+<area shape="rect" title=" " alt="" coords="975,152,1038,177"/>
+<area shape="poly" title=" " alt="" coords="703,98,817,119,962,149,961,154,816,124,702,103"/>
 </map>
 </div>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmpi__algorithm_1_1mpi__type__traits_3_01int_01_4.html">mpi_algorithm::mpi_type_traits&lt; int &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmpi__algorithm_1_1mpi__type__traits_3_01float_01_4.html">mpi_algorithm::mpi_type_traits&lt; float &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmpi__algorithm_1_1mpi__type__traits_3_01double_01_4.html">mpi_algorithm::mpi_type_traits&lt; double &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmpi__algorithm_1_1mpi__type__traits_3_01long_01_4.html">mpi_algorithm::mpi_type_traits&lt; long &gt;</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacempi__algorithm" id="r_namespacempi__algorithm"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacempi__algorithm.html">mpi_algorithm</a></td></tr>
