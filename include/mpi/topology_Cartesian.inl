@@ -64,9 +64,9 @@ Cartesian<T, NumD>::operator=(Cartesian<T, NumD>&& other) noexcept
     nbr_dest(std::move(other.nbr_dest));
     coordinates(std::move(other.coordinates));
     halos(std::move(other.halos));
-    rank(std::move(other.rank));
-    size(std::move(other.size));
-    comm_cart(other.comm_cart);
+    rank = std::move(other.rank);
+    size = std::move(other.size);
+    comm_cart = other.comm_cart;
 
     other.comm_cart = MPI_COMM_NULL;
     other.rank = -1;
