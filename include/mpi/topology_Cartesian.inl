@@ -85,8 +85,6 @@ Cartesian<T, NumD>::~Cartesian()
   {
     MPI_Comm_free(&comm_cart);
   }
-  /// TODO:
-  /// 注意：如果 halos 中的 MPI_Datatype 是被 Commit 过的，这里也需要循环调用 MPI_Type_free
 }
 
 ///
@@ -103,7 +101,6 @@ Cartesian<T, NumD>::Cartesian(
   : global_shape(glob_shape),
     local_shape(glob_shape)
 {
-  int orig_rank;
   MPI_Comm_size(comm, &size);
   MPI_Comm_rank(comm, &rank);
 
