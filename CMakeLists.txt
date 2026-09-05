@@ -44,12 +44,12 @@ set(EXECUTABLES
   conways-game-3D
 )
 
+# Compile definition macros
 set(DIM_X 124 CACHE STRING "X dimension for Conway's Game")
 set(DIM_Y 124 CACHE STRING "Y dimension for Conway's Game")
 set(DIM_Z 124 CACHE STRING "Z dimension for Conway's Game")
 
 set(DATA_TYPE "uint8_t" CACHE STRING "Datatype for elements in Conway's Game")
-
 
 target_compile_definitions(common_settings INTERFACE
   DIM_X=${DIM_X}
