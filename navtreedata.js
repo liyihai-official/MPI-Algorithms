@@ -62,7 +62,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"structmpi__type_1_1mpi__type__traits_3_01uint8__t_01_4.html"
+"structmpi__type_1_1mpi__type__traits_3_01float_01_4.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

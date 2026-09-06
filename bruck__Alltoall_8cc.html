@@ -90,9 +90,259 @@ $(document).ready(function(){initNavTree('bruck__Alltoall_8cc.html',''); initRes
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">bruck_Alltoall.cc File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The main file of bruck algorithm demonstration.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;mpi.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &quot;<a class="el" href="bruck_8hpp_source.html">mpi/bruck.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for bruck_Alltoall.cc:</div>
+<div class="dyncontent">
+<div class="center"><img src="bruck__Alltoall_8cc__incl.png" border="0" usemap="#abruck__Alltoall_8cc" alt=""/></div>
+<map name="abruck__Alltoall_8cc" id="abruck__Alltoall_8cc">
+<area shape="rect" title="The main file of bruck algorithm demonstration." alt="" coords="157,5,286,31"/>
+<area shape="rect" title=" " alt="" coords="240,225,299,251"/>
+<area shape="poly" title=" " alt="" coords="186,33,151,51,136,64,124,80,121,91,124,103,133,143,141,158,155,175,190,202,228,221,226,225,187,207,151,179,137,161,128,145,119,105,116,91,119,78,132,61,148,47,183,28"/>
+<area shape="rect" title=" " alt="" coords="133,79,208,104"/>
+<area shape="poly" title=" " alt="" coords="215,33,189,69,185,66,211,29"/>
+<area shape="rect" title=" " alt="" coords="232,79,312,104"/>
+<area shape="poly" title=" " alt="" coords="232,29,258,66,254,69,228,33"/>
+<area shape="rect" href="bruck_8hpp.html" title="The implementation of the Bruck algorithm demonstration." alt="" coords="336,79,451,104"/>
+<area shape="poly" title=" " alt="" coords="250,28,354,71,352,76,248,33"/>
+<area shape="poly" title=" " alt="" coords="364,106,328,125,297,154,282,182,275,212,269,211,277,181,293,150,325,121,361,102"/>
+<area shape="rect" title=" " alt="" coords="165,152,232,177"/>
+<area shape="poly" title=" " alt="" coords="363,107,244,150,242,145,361,102"/>
+<area shape="rect" href="type_8hpp.html" title="get mpi datatypes based on given C datatype." alt="" coords="307,152,415,177"/>
+<area shape="poly" title=" " alt="" coords="390,105,374,141,370,139,386,103"/>
+<area shape="rect" href="multiarray_8hpp.html" title="This file provides a multi&#45;dimensional array and its shape templates." alt="" coords="395,225,511,251"/>
+<area shape="poly" title=" " alt="" coords="403,103,429,151,449,211,444,212,424,153,398,105"/>
+<area shape="rect" href="randin_8hpp.html" title=" " alt="" coords="625,152,716,177"/>
+<area shape="poly" title=" " alt="" coords="439,101,613,146,612,151,437,107"/>
+<area shape="poly" title=" " alt="" coords="348,179,297,219,293,215,345,175"/>
+<area shape="rect" title=" " alt="" coords="5,299,72,324"/>
+<area shape="poly" title=" " alt="" coords="360,178,344,215,330,236,312,253,283,271,257,282,207,291,153,293,86,301,85,296,152,288,206,286,255,277,281,266,309,249,326,232,339,213,355,176"/>
+<area shape="poly" title=" " alt="" coords="395,250,258,270,86,301,85,296,257,265,394,245"/>
+<area shape="rect" title=" " alt="" coords="603,299,688,324"/>
+<area shape="poly" title=" " alt="" coords="485,248,602,291,600,296,483,253"/>
+<area shape="rect" title=" " alt="" coords="523,299,579,324"/>
+<area shape="poly" title=" " alt="" coords="471,249,525,288,522,292,467,253"/>
+<area shape="rect" title=" " alt="" coords="96,299,165,324"/>
+<area shape="poly" title=" " alt="" coords="399,253,180,301,179,296,398,248"/>
+<area shape="rect" title=" " alt="" coords="712,299,792,324"/>
+<area shape="poly" title=" " alt="" coords="502,248,699,295,698,300,501,253"/>
+<area shape="rect" title=" " alt="" coords="189,299,264,324"/>
+<area shape="poly" title=" " alt="" coords="418,253,277,297,276,292,416,248"/>
+<area shape="rect" title=" " alt="" coords="288,299,365,324"/>
+<area shape="poly" title=" " alt="" coords="434,253,361,294,358,289,432,248"/>
+<area shape="rect" title=" " alt="" coords="817,299,909,324"/>
+<area shape="poly" title=" " alt="" coords="512,246,804,296,803,301,511,251"/>
+<area shape="rect" href="multiarray_8inl.html" title="This file contains the implementation of the multi&#45;dimensional array class and its associated shape c..." alt="" coords="390,299,498,324"/>
+<area shape="poly" title=" " alt="" coords="454,251,450,286,445,285,449,251"/>
+<area shape="poly" title=" " alt="" coords="637,180,502,224,501,218,635,175"/>
+<area shape="poly" title=" " alt="" coords="671,178,652,285,647,285,666,177"/>
+<area shape="poly" title=" " alt="" coords="680,176,741,285,736,288,675,179"/>
+<area shape="poly" title=" " alt="" coords="685,175,774,249,834,289,831,294,770,253,682,180"/>
+<area shape="rect" title=" " alt="" coords="784,225,856,251"/>
+<area shape="poly" title=" " alt="" coords="696,175,784,217,782,222,694,180"/>
+<area shape="rect" title=" " alt="" coords="880,225,933,251"/>
+<area shape="poly" title=" " alt="" coords="709,175,868,222,866,227,708,180"/>
+<area shape="rect" title=" " alt="" coords="545,225,607,251"/>
+<area shape="poly" title=" " alt="" coords="657,179,604,219,601,215,654,175"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:af6ec22f9c3bd91bd252e29aebb461b11" id="r_af6ec22f9c3bd91bd252e29aebb461b11"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bruck__Alltoall_8cc.html#af6ec22f9c3bd91bd252e29aebb461b11">DIM_X</a>&#160;&#160;&#160;1024</td></tr>
+<tr class="memdesc:af6ec22f9c3bd91bd252e29aebb461b11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Problem Size.  <br /></td></tr>
+<tr class="separator:af6ec22f9c3bd91bd252e29aebb461b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fa9a687139f39c5033eb566a9e7b6e1" id="r_a5fa9a687139f39c5033eb566a9e7b6e1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bruck__Alltoall_8cc.html#a5fa9a687139f39c5033eb566a9e7b6e1">DIM_Y</a>&#160;&#160;&#160;1024</td></tr>
+<tr class="separator:a5fa9a687139f39c5033eb566a9e7b6e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ee1669e4235e65a86c90dfecbff5387" id="r_a3ee1669e4235e65a86c90dfecbff5387"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bruck__Alltoall_8cc.html#a3ee1669e4235e65a86c90dfecbff5387">DIM_Z</a>&#160;&#160;&#160;1024</td></tr>
+<tr class="separator:a3ee1669e4235e65a86c90dfecbff5387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a099c90519d34c2dbab58e4a771aa6f25" id="r_a099c90519d34c2dbab58e4a771aa6f25"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bruck__Alltoall_8cc.html#a099c90519d34c2dbab58e4a771aa6f25">value_type</a> = double</td></tr>
+<tr class="memdesc:a099c90519d34c2dbab58e4a771aa6f25"><td class="mdescLeft">&#160;</td><td class="mdescRight">includes  <br /></td></tr>
+<tr class="separator:a099c90519d34c2dbab58e4a771aa6f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8560ac5527cd0ed38d71e0e58acc8021" id="r_a8560ac5527cd0ed38d71e0e58acc8021"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bruck__Alltoall_8cc.html#a8560ac5527cd0ed38d71e0e58acc8021">size_type</a> = size_t</td></tr>
+<tr class="separator:a8560ac5527cd0ed38d71e0e58acc8021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627" id="r_a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bruck__Alltoall_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aae732a9029a5aba6be7223976e4d6a35" id="r_aae732a9029a5aba6be7223976e4d6a35"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bruck__Alltoall_8cc.html#aae732a9029a5aba6be7223976e4d6a35">SEED</a> {2027}</td></tr>
+<tr class="memdesc:aae732a9029a5aba6be7223976e4d6a35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Random Seed.  <br /></td></tr>
+<tr class="separator:aae732a9029a5aba6be7223976e4d6a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The main file of bruck algorithm demonstration. </p>
+<dl class="section author"><dt>Author</dt><dd>Yihai Li </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>Sept. 2 2026 </dd></dl>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="af6ec22f9c3bd91bd252e29aebb461b11" name="af6ec22f9c3bd91bd252e29aebb461b11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6ec22f9c3bd91bd252e29aebb461b11">&#9670;&#160;</a></span>DIM_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DIM_X&#160;&#160;&#160;1024</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Problem Size. </p>
+
+</div>
+</div>
+<a id="a5fa9a687139f39c5033eb566a9e7b6e1" name="a5fa9a687139f39c5033eb566a9e7b6e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fa9a687139f39c5033eb566a9e7b6e1">&#9670;&#160;</a></span>DIM_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DIM_Y&#160;&#160;&#160;1024</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ee1669e4235e65a86c90dfecbff5387" name="a3ee1669e4235e65a86c90dfecbff5387"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ee1669e4235e65a86c90dfecbff5387">&#9670;&#160;</a></span>DIM_Z</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DIM_Z&#160;&#160;&#160;1024</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a8560ac5527cd0ed38d71e0e58acc8021" name="a8560ac5527cd0ed38d71e0e58acc8021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8560ac5527cd0ed38d71e0e58acc8021">&#9670;&#160;</a></span>size_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="bruck__Alltoall_8cc.html#a8560ac5527cd0ed38d71e0e58acc8021">size_type</a> =  size_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a099c90519d34c2dbab58e4a771aa6f25" name="a099c90519d34c2dbab58e4a771aa6f25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a099c90519d34c2dbab58e4a771aa6f25">&#9670;&#160;</a></span>value_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="bruck__Alltoall_8cc.html#a099c90519d34c2dbab58e4a771aa6f25">value_type</a> =  double</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>includes </p>
+<p>using datatypes </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a3c04138a5bfe5d72780bb7e82a18e627" name="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Preparing for benchmark tests</p>
+<dl class="section note"><dt>Note</dt><dd>Print the sum difference if needed.</dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bruck__Alltoall_8cc_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.png" border="0" usemap="#abruck__Alltoall_8cc_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" alt=""/></div>
+<map name="abruck__Alltoall_8cc_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" id="abruck__Alltoall_8cc_a3c04138a5bfe5d72780bb7e82a18e627_cgraph">
+<area shape="rect" title=" " alt="" coords="5,74,60,99"/>
+<area shape="rect" href="namespacempi__algorithm.html#a5f4db94e91d99d00ce6b9808c7370a5c" title="Bruck&#39;s All&#45;to&#45;All communication algorithm using non&#45;blocking MPI calls." alt="" coords="108,37,277,77"/>
+<area shape="poly" title=" " alt="" coords="60,79,94,73,95,78,61,84"/>
+<area shape="rect" href="classarray__randomizer.html#a3005e1cb6535241376f11ca65b887b39" title="C style array randomizer." alt="" coords="112,102,273,127"/>
+<area shape="poly" title=" " alt="" coords="61,89,107,97,106,102,60,94"/>
+<area shape="rect" href="classmulti__array_1_1array.html#afa1ab594cdd35f550ce49fd68754180f" title=" " alt="" coords="325,5,464,45"/>
+<area shape="poly" title=" " alt="" coords="277,41,311,36,312,41,278,47"/>
+<area shape="rect" href="classmulti__array_1_1array.html#aea580ad7afbdc7217283fab14009a3e1" title=" " alt="" coords="325,69,464,109"/>
+<area shape="poly" title=" " alt="" coords="278,68,312,74,311,79,277,73"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="aae732a9029a5aba6be7223976e4d6a35" name="aae732a9029a5aba6be7223976e4d6a35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae732a9029a5aba6be7223976e4d6a35">&#9670;&#160;</a></span>SEED</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int SEED {2027}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Random Seed. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

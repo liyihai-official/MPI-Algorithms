@@ -1,24 +1,26 @@
 <map id="include/multiarray.hpp" name="include/multiarray.hpp">
-<area shape="rect" id="Node000001" title="This file provides a multi&#45;dimensional array and its shape templates." alt="" coords="348,5,515,31"/>
+<area shape="rect" id="Node000001" title="This file provides a multi&#45;dimensional array and its shape templates." alt="" coords="341,5,508,31"/>
 <area shape="rect" id="Node000002" href="$conway2D_8cc.html" title=" " alt="" coords="5,240,113,265"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="335,30,246,48,201,62,158,81,124,98,99,115,79,136,62,168,56,186,55,206,59,239,54,240,50,206,51,185,57,166,75,133,96,111,122,94,156,76,199,57,245,43,334,25"/>
-<area shape="rect" id="Node000003" href="$conway3D_8cc.html" title="MPI Parallel Conway&#39;s Game of Life using custom Cartesian topology." alt="" coords="363,240,471,265"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="484,32,551,58,586,75,618,95,644,116,660,140,663,166,651,194,639,204,621,213,575,228,471,248,470,242,574,223,619,208,636,200,647,190,658,166,655,142,640,120,615,99,584,80,549,63,482,37"/>
-<area shape="rect" id="Node000004" href="$bruck_8hpp.html" title="The implementation of the Bruck algorithm demonstration." alt="" coords="469,167,636,192"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="468,35,494,53,517,77,532,100,542,125,553,166,548,167,537,126,527,102,513,80,490,58,465,40"/>
-<area shape="rect" id="Node000005" href="$topology__Cartesian_8hpp.html" title="This file is header file of Cartesian structure in mpi_topology." alt="" coords="168,79,327,119"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="393,38,293,81,291,76,391,33"/>
-<area shape="rect" id="Node000008" href="$randin_8hpp.html" title=" " alt="" coords="360,86,503,111"/>
-<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="434,44,434,86,429,86,429,44"/>
-<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="156,120,114,139,95,152,79,168,69,185,63,205,61,240,56,239,58,204,64,183,75,165,92,148,111,135,154,115"/>
-<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="299,123,329,142,357,165,390,204,413,238,408,241,386,207,353,169,326,146,296,128"/>
-<area shape="rect" id="Node000006" href="$io__Cartesian_8hpp.html" title="This file contains the implementation of the MPI_IO under Cartesian structure in namespace mpi_io." alt="" coords="133,167,343,192"/>
-<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="246,133,242,167,237,166,241,132"/>
-<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="198,199,90,242,88,237,196,194"/>
-<area shape="poly" id="edge9_Node000006_Node000003" title=" " alt="" coords="280,194,388,237,386,242,278,199"/>
-<area shape="rect" id="Node000007" href="$io__Cartesian_8cc.html" title=" " alt="" coords="151,240,325,265"/>
-<area shape="poly" id="edge10_Node000006_Node000007" title=" " alt="" coords="241,206,241,240,235,240,235,206"/>
-<area shape="poly" id="edge12_Node000008_Node000002" title=" " alt="" coords="363,117,122,169,103,185,87,205,67,241,62,239,83,202,99,181,119,164,362,112"/>
-<area shape="poly" id="edge13_Node000008_Node000003" title=" " alt="" coords="432,125,420,240,415,240,426,124"/>
-<area shape="poly" id="edge14_Node000008_Node000004" title=" " alt="" coords="463,117,536,164,533,169,460,121"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="328,29,256,43,181,68,145,86,112,109,84,136,62,168,55,186,54,205,59,239,53,240,49,205,50,185,57,165,80,132,109,105,142,82,178,63,255,37,327,24"/>
+<area shape="rect" id="Node000003" href="$conway3D_8cc.html" title="MPI Parallel Conway&#39;s Game of Life using custom Cartesian topology." alt="" coords="364,240,472,265"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="427,45,421,240,416,240,421,45"/>
+<area shape="rect" id="Node000004" href="$bruck_8hpp.html" title="The implementation of the Bruck algorithm demonstration." alt="" coords="555,167,721,192"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="522,26,574,44,598,59,619,77,632,99,639,124,642,166,636,167,634,125,627,101,615,80,595,63,572,49,520,31"/>
+<area shape="rect" id="Node000006" href="$topology__Cartesian_8hpp.html" title="This file is header file of Cartesian structure in mpi_topology." alt="" coords="213,79,372,119"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="395,40,326,81,323,76,392,36"/>
+<area shape="rect" id="Node000009" href="$randin_8hpp.html" title=" " alt="" coords="463,86,605,111"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="454,37,519,84,516,88,451,41"/>
+<area shape="rect" id="Node000005" href="$bruck__Alltoall_8cc.html" title="The main file of bruck algorithm demonstration." alt="" coords="573,240,703,265"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="641,206,641,240,635,240,635,206"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="201,110,168,118,135,129,105,146,79,168,68,185,63,205,61,240,56,240,58,204,63,183,75,165,102,142,133,125,166,112,199,105"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="323,127,357,165,412,238,408,241,353,168,319,130"/>
+<area shape="rect" id="Node000007" href="$io__Cartesian_8hpp.html" title="This file contains the implementation of the MPI_IO under Cartesian structure in namespace mpi_io." alt="" coords="133,167,343,192"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="274,132,248,168,244,165,269,128"/>
+<area shape="poly" id="edge9_Node000007_Node000002" title=" " alt="" coords="198,199,90,242,88,237,196,194"/>
+<area shape="poly" id="edge10_Node000007_Node000003" title=" " alt="" coords="280,194,390,237,388,242,278,199"/>
+<area shape="rect" id="Node000008" href="$io__Cartesian_8cc.html" title=" " alt="" coords="151,240,325,265"/>
+<area shape="poly" id="edge11_Node000007_Node000008" title=" " alt="" coords="241,206,241,240,235,240,235,206"/>
+<area shape="poly" id="edge13_Node000009_Node000002" title=" " alt="" coords="449,115,247,145,162,159,122,169,103,185,87,204,66,241,62,238,83,201,99,181,119,164,161,154,246,140,448,109"/>
+<area shape="poly" id="edge14_Node000009_Node000003" title=" " alt="" coords="519,124,429,241,425,238,515,120"/>
+<area shape="poly" id="edge15_Node000009_Node000004" title=" " alt="" coords="562,117,624,164,621,169,558,122"/>
 </map>

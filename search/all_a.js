@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['main_0',['main',['../conway3D_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;conway3D.cc'],['../conway2D_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;conway2D.cc']]],
+  ['main_0',['main',['../conway3D_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;conway3D.cc'],['../conway2D_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;conway2D.cc'],['../bruck__Alltoall_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;bruck_Alltoall.cc']]],
   ['mpi_5falgorithm_1',['mpi_algorithm',['../namespacempi__algorithm.html',1,'']]],
   ['mpi_5farray_2',['mpi_array',['../namespacempi__array.html',1,'']]],
   ['mpi_5fio_3',['mpi_io',['../namespacempi__io.html',1,'']]],

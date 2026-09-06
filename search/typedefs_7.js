@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value_5ftype_0',['value_type',['../classmulti__array_1_1array.html#ab06ee6e6cc134438c657e068f81a484b',1,'multi_array::array']]]
+  ['size_5ftype_0',['size_type',['../bruck__Alltoall_8cc.html#a8560ac5527cd0ed38d71e0e58acc8021',1,'bruck_Alltoall.cc']]]
 ];
