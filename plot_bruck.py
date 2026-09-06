@@ -43,5 +43,5 @@ for i, dtype in enumerate(data_types):
 
 plt.tight_layout()
 plt.subplots_adjust(top=0.92)
-plt.savefig('bruck_vs_mpi_3d.png', dpi=300, facecolor='white')
+plt.savefig('figure/bruck_vs_mpi_3d.png', dpi=300, facecolor='white')
 plt.show()
