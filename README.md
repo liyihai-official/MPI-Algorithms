@@ -16,4 +16,4 @@ documentation
 </a>.
 
 <img src="conways_game.gif" width="400" height="400" />
-<img src="conways_3d.gif" width="400" height="400" />
+<img src="figure/conways_3d.gif" width="400" height="400" />
