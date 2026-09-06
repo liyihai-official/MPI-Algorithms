@@ -1,0 +1,26 @@
+var plot__bruck_8py =
+[
+    [ "alpha", "plot__bruck_8py.html#a154a37c91ba1c94bfc281c88122201c1", null ],
+    [ "ax", "plot__bruck_8py.html#a1b1cecda0fd62a736afdbdfd71d84f60", null ],
+    [ "axes", "plot__bruck_8py.html#abcab514e987c3bf2e0e888e798e0591e", null ],
+    [ "base", "plot__bruck_8py.html#acd3e53625be77ca3a993f3ef80f43cad", null ],
+    [ "columns", "plot__bruck_8py.html#a392f2912ec68eb49db4811defa0bd1a0", null ],
+    [ "data_types", "plot__bruck_8py.html#acc9289f0b7f93b675fdd87774f0082f0", null ],
+    [ "df", "plot__bruck_8py.html#aef5375ec354449b87989f7a37bc15dee", null ],
+    [ "dpi", "plot__bruck_8py.html#aed4be26913eb98af1c10ec608e3f14c9", null ],
+    [ "facecolor", "plot__bruck_8py.html#a74c9b0fb97c1d9f673157b0336d8799d", null ],
+    [ "fig", "plot__bruck_8py.html#aee0df2ed9fdda590294b2f7ac815823d", null ],
+    [ "figsize", "plot__bruck_8py.html#ae914701b35e5082b0627456df24984ca", null ],
+    [ "fontsize", "plot__bruck_8py.html#aa8fa17d1ab7dc35d4132072dcca840f0", null ],
+    [ "label", "plot__bruck_8py.html#a1da022d4b5dd860d383277eef44dd701", null ],
+    [ "linestyle", "plot__bruck_8py.html#a94a7e34b1d42fa22544d9c5085944ae9", null ],
+    [ "ls", "plot__bruck_8py.html#a3fd14080ef416965cb654f279c8b3aca", null ],
+    [ "marker", "plot__bruck_8py.html#a466be56e6eb810f3e125515faae8739c", null ],
+    [ "mpi_ranks", "plot__bruck_8py.html#acc5d2a7ee4211009f7b17341a6b0cef1", null ],
+    [ "sharex", "plot__bruck_8py.html#a83b8d62d27772745d519531cbecb046b", null ],
+    [ "sharey", "plot__bruck_8py.html#ac55dd5999ba0ee61ffe1e5e695501be2", null ],
+    [ "subset", "plot__bruck_8py.html#a891a8acde51aed3f85b1ed5cb4899746", null ],
+    [ "top", "plot__bruck_8py.html#a09db971d533fb7eea8374e1df9b31e52", null ],
+    [ "True", "plot__bruck_8py.html#a33da05875b1c5ca481d0f26929895032", null ],
+    [ "which", "plot__bruck_8py.html#ab8c778a937432700e6860f445d3a4745", null ]
+];

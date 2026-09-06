@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['periods_0',['periods',['../structmpi__topology_1_1Cartesian.html#acd67b803fa5728cc415c53876752dae5',1,'mpi_topology::Cartesian']]]
+  ['halos_0',['halos',['../structmpi__topology_1_1Cartesian.html#add4730eee2d2ca9962547fd563196bb6',1,'mpi_topology::Cartesian']]]
 ];
