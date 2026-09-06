@@ -343,7 +343,7 @@ HTML_STYLESHEET        =
 
 HTML_EXTRA_STYLESHEET  = doxygen-awesome.css
 
-HTML_EXTRA_FILES       =
+HTML_EXTRA_FILES       = figure/conways_game.gif figure/conways_3d.gif
 
 HTML_COLORSTYLE        = AUTO_LIGHT
 

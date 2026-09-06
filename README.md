@@ -17,5 +17,6 @@ documentation
 
 <img src="figure/conways_game.gif" width="400" height="400" />
 <img src="figure/conways_3d.gif" width="400" height="400" />
-\image html conways_game.gif width=400cm
+
+\image html figure/conways_game.gif width=400cm
 \image html figure/conways_3d.gif width=400cm

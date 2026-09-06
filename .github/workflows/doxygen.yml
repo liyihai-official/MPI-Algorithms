@@ -22,6 +22,11 @@ jobs:
       - name: Generate Doxygen Documentation
         run: doxygen Doxyfile
 
+      - name: Create and copy figures to html/figure
+        run: |
+          mkdir html/figure
+          cp -r figure html/figure
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
