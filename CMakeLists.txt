@@ -33,13 +33,13 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
 endif()
 
 # Execs
-add_executable(bruck_algorithm main.cc)
+add_executable(bruck_Alltoall bruck_Alltoall.cc)
 add_executable(conways-game-2D conway2D.cc src/mpi/io_Cartesian.cc)
 add_executable(conways-game-3D conway3D.cc src/mpi/io_Cartesian.cc)
 
 # linkings
 set(EXECUTABLES 
-  bruck_algorithm 
+  bruck_Alltoall 
   conways-game-2D 
   conways-game-3D
 )
