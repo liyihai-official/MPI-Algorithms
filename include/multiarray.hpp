@@ -45,8 +45,8 @@ struct multi_array_shape
   multi_array_shape& operator=(multi_array_shape&&) noexcept;
 
   // Operators
-  bool operator==(const multi_array_shape&) noexcept;
-  bool operator!=(const multi_array_shape&) noexcept;
+  bool operator==(const multi_array_shape&) const noexcept;
+  bool operator!=(const multi_array_shape&) const noexcept;
 
   /// @brief Constructs a multi-dimensional array shape.
   /// @tparam ...Exts The types of the shape dimensions.
@@ -122,6 +122,13 @@ class array
 
   inline reference operator[](size_t);
   inline const_reference operator[](size_t) const;
+
+  // Computer operator
+ public:
+  array operator+(const array&) const;
+  array operator-(const array&) const;
+  array& operator+=(const array&);
+  array& operator-=(const array&);
 
  private:
   inline void total_size() noexcept;

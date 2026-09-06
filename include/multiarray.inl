@@ -88,6 +88,22 @@ multi_array_shape<NumD>::operator=(
   return *this;
 }
 
+template <size_t NumD>
+inline bool
+multi_array_shape<NumD>::operator==(
+  const multi_array_shape<NumD>& other) const noexcept
+{
+  return (dims == other.dims) && (strides == other.strides);
+}
+
+template <size_t NumD>
+inline bool
+multi_array_shape<NumD>::operator!=(
+  const multi_array_shape<NumD>& other) const noexcept
+{
+  return !(*this == other);
+}
+
 /// @brief Constructs a multi-dimensional array shape with
 ///         the specified dimensions.
 /// @tparam NumD Number of dimensions.
@@ -116,6 +132,12 @@ inline void multi_array_shape<NumD>::compute_strides()
     strides[i - 1] = strides[i] * dims[i];
 }
 
+////////////////////////////////////////////////////////////////////////////////
+/*
+ *                     Member functions of class array
+ */
+////////////////////////////////////////////////////////////////////////////////
+
 /// @brief Constructor for the multi-dimensional array class.
 /// @tparam T The type of the elements in the array.
 /// @tparam NumD Number of dimensions.
@@ -126,12 +148,6 @@ array<T, NumD>::array() noexcept
     total_size_(0)
 {
 }
-
-////////////////////////////////////////////////////////////////////////////////
-/*
- *                     Member functions of class array
- */
-////////////////////////////////////////////////////////////////////////////////
 
 /// @brief Constructor for the multi-dimensional array class
 ///         with specified dimensions.
@@ -311,6 +327,66 @@ array<T, NumD>::operator[](size_t flat_idx) const
 {
   assert(flat_idx < total_size_ && "Flat index out of range!");
   return data_[flat_idx];
+}
+
+/// @brief Performs element-wise addition of two arrays.
+template <typename T, size_t NumD>
+inline array<T, NumD> array<T, NumD>::operator+(
+  const array<T, NumD>& other)
+  const
+{
+  if (this->shape_ != other.shape_)
+    throw std::invalid_argument("Array dimension must match!");
+
+  array<T, NumD> result(this->shape_);
+  for (size_t i = 0; i < total_size_; ++i)
+    result.data_[i] = this->data_[i] + other.data_[i];
+
+  return result;
+}
+
+/// @brief Performs element-wise subtraction of two arrays.
+template <typename T, size_t NumD>
+inline array<T, NumD> array<T, NumD>::operator-(
+  const array<T, NumD>& other)
+  const
+{
+  if (this->shape_ != other.shape_)
+    throw std::invalid_argument("Array dimension must match!");
+
+  array<T, NumD> result(this->shape_);
+  for (size_t i = 0; i < total_size_; ++i)
+    result.data_[i] = this->data_[i] - other.data_[i];
+
+  return result;
+}
+
+/// @brief Adds another array to this array element-wise.
+template <typename T, size_t NumD>
+inline array<T, NumD>& array<T, NumD>::operator+=(
+  const array<T, NumD>& other)
+{
+  if (this->shape_ != other.shape_)
+    throw std::invalid_argument("Array dimension must match!");
+
+  for (size_t i = 0; i < total_size_; ++i)
+    this->data_[i] += other.data_[i];
+
+  return *this;
+}
+
+/// @brief Minuses another array to this array element-wise.
+template <typename T, size_t NumD>
+inline array<T, NumD>& array<T, NumD>::operator-=(
+  const array<T, NumD>& other)
+{
+  if (this->shape_ != other.shape_)
+    throw std::invalid_argument("Array dimension must match!");
+
+  for (size_t i = 0; i < total_size_; ++i)
+    this->data_[i] -= other.data_[i];
+
+  return *this;
 }
 
 /// @brief Calculate the total size of the array.
