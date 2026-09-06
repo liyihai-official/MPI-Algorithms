@@ -86,6 +86,7 @@ int main(int argc, char** argv)
       }
 
       // Run the simulation
+      MPI_Barrier(grid.topology.comm_cart);
       double begin_time{MPI_Wtime()};
       for (int generation = 0; generation < NUM_GENERATION; ++generation)
       {
@@ -99,6 +100,8 @@ int main(int argc, char** argv)
           grid,
           out_filename);
       }
+
+      MPI_Barrier(grid.topology.comm_cart);
       double total_time{MPI_Wtime() - begin_time};
 
       if (0 == grid.topology.rank)
