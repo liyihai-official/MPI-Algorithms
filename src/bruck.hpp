@@ -1,5 +1,5 @@
 ///
-/// @file bruck.cc
+/// @file bruck.hpp
 /// @brief The implementation of the Bruck algorithm demonstration.
 ///
 ///
