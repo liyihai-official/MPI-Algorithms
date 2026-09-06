@@ -212,7 +212,7 @@ WARN_LINE_FORMAT       = "at line $line of file $file"
 
 WARN_LOGFILE           =
 
-INPUT                  = 
+INPUT                  = .
 
 INPUT_ENCODING         = UTF-8
 
