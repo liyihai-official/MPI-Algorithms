@@ -32,6 +32,9 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
   )
 endif()
 
+# Compile Optimization Flag
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
+
 # Execs
 add_executable(bruck_Alltoall bruck_Alltoall.cc)
 add_executable(conways-game-2D conway2D.cc src/mpi/io_Cartesian.cc)
