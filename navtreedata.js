@@ -25,9 +25,7 @@
 var NAVTREE =
 [
   [ "MPI-Algorithms", "index.html", [
-    [ "Documentation", "md_README.html", [
-      [ "Description", "md_README.html#autotoc_md1", null ]
-    ] ],
+    [ "Documentation", "index.html", "index" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
