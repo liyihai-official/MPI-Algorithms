@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "MPI-Algorithms", "index.html", [
-    [ "Documentation", "index.html", "index" ],
+    [ "MPI-Algorithms: Bruck All-to-all & Conway's Game of Life", "index.html", "index" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -61,7 +61,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"structmpi__topology_1_1Cartesian.html#a2fc490c9341bf5d766376eded2354198"
+"plot__bruck_8py.html#aee0df2ed9fdda590294b2f7ac815823d"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

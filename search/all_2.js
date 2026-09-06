@@ -11,8 +11,10 @@ var searchData=
   ['const_5fpointer_8',['const_pointer',['../classmulti__array_1_1array.html#af1a2594f5c60031662c49c544751add7',1,'multi_array::array']]],
   ['const_5freference_9',['const_reference',['../structmulti__array_1_1multi__array__shape.html#a24dea525f045eaef8b55c658884c8550',1,'multi_array::multi_array_shape::const_reference'],['../classmulti__array_1_1array.html#a58d9da816dad09fd80f087ed87558de4',1,'multi_array::array::const_reference']]],
   ['const_5fsize_10',['const_size',['../structmulti__array_1_1multi__array__shape.html#abad10d82ac01e42a66e0a0a6c8520ea5',1,'multi_array::multi_array_shape']]],
-  ['conway2d_2ecc_11',['conway2D.cc',['../conway2D_8cc.html',1,'']]],
-  ['conway3d_2ecc_12',['conway3D.cc',['../conway3D_8cc.html',1,'']]],
-  ['coordinates_13',['coordinates',['../structmpi__topology_1_1Cartesian.html#a7ac239779899488754c167e76f4a2846',1,'mpi_topology::Cartesian']]],
-  ['current_5fdata_14',['current_data',['../classmpi__array_1_1array__cartesian.html#a848d0312f84be4bbeba987777bf05054',1,'mpi_array::array_cartesian']]]
+  ['conway_20s_20game_20of_20life_11',['MPI-Algorithms: Bruck All-to-all &amp; Conway&apos;s Game of Life',['../index.html',1,'']]],
+  ['conway2d_2ecc_12',['conway2D.cc',['../conway2D_8cc.html',1,'']]],
+  ['conway3d_2ecc_13',['conway3D.cc',['../conway3D_8cc.html',1,'']]],
+  ['coordinates_14',['coordinates',['../structmpi__topology_1_1Cartesian.html#a7ac239779899488754c167e76f4a2846',1,'mpi_topology::Cartesian']]],
+  ['core_20features_15',['Core Features',['../index.html#autotoc_md4',1,'']]],
+  ['current_5fdata_16',['current_data',['../classmpi__array_1_1array__cartesian.html#a848d0312f84be4bbeba987777bf05054',1,'mpi_array::array_cartesian']]]
 ];

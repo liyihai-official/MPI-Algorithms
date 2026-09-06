@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MPI-Algorithms: Documentation</title>
+<title>MPI-Algorithms: MPI-Algorithms: Bruck All-to-all &amp; Conway&#39;s Game of Life</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -90,16 +90,87 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Documentation </div></div>
+  <div class="headertitle"><div class="title">MPI-Algorithms: Bruck All-to-all &amp; Conway's Game of Life </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README"></a> </p>
-<h1><a class="anchor" id="autotoc_md1"></a>
-Description</h1>
-<p>This repo provides series methods of template class of multi-dimensional <code>array</code>, including printing function for easily viewing values (see the details in <a href="https://liyihai-official.github.io/MPI-Algorithms/classmulti__array_1_1array.html">multi_array::array&lt; T, NumD &gt; Class Template Reference </a>. )</p>
-<p>See the full docs on: <a href="https://liyihai-official.github.io/MPI-Algorithms/">documentation </a>.</p>
-<p><img src="figure/conways_game.gif" alt="" width="400" height="400" class="inline"/> <img src="figure/conways_3d.gif" alt="" width="400" height="400" class="inline"/> </p>
-</div></div><!-- PageDoc -->
+<div class="textblock"><p><a class="anchor" id="md_README"></a> <b><a class="el" href="index.html#english-version">English</a></b> | <b><a class="el" href="index.html#chinese-version">中文</a></b></p>
+<hr  />
+<p><a class="anchor" id="english-version"></a></p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Documentation</h1>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Project Overview</h2>
+<p>This project is a high-performance computing (HPC) and parallel algorithms library built with modern C++20 and OpenMPI. The core repository provides a robust implementation of the non-blocking Bruck All-to-all communication algorithm in<code><a class="el" href="bruck_8hpp.html" title="The implementation of the Bruck algorithm demonstration.">bruck.hpp</a></code>, alongside comprehensive benchmarking against the standard <code>MPI_Alltoall</code>. Furthermore, it features a custom Cartesian topology framework used to simulate both 2D (<code><a class="el" href="conway2D_8cc.html">conway2D.cc</a></code>) and 3D (<code><a class="el" href="conway3D_8cc.html" title="MPI Parallel Conway&#39;s Game of Life using custom Cartesian topology.">conway3D.cc</a></code>) parallel Conway's Game of Life.</p>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Core Features</h2>
+<ul>
+<li><b>Bruck All-to-all Algorithm</b>:<ul>
+<li>Implements a non-blocking All-to-all collective communication algorithm <code><a class="el" href="namespacempi__algorithm.html#a5f4db94e91d99d00ce6b9808c7370a5c" title="Bruck&#39;s All-to-All communication algorithm using non-blocking MPI calls.">mpi_algorithm::Bruck_Alltoall_noneblocking</a></code> using bitwise shift calculations, <code>MPI_Isend</code>, and <code>MPI_Irecv</code>.</li>
+</ul>
+</li>
+<li><b>Parallel Game of Life</b>:<ul>
+<li><b>2D Evolution</b>: <code><a class="el" href="conway2D_8cc.html">conway2D.cc</a></code> Utilizes standard Game of Life rules (Survival: 2-3 neighbors, Reproduction: exactly 3 neighbors) over a distributed 2D grid.</li>
+<li><b>3D Evolution</b>: <code><a class="el" href="conway3D_8cc.html" title="MPI Parallel Conway&#39;s Game of Life using custom Cartesian topology.">conway3D.cc</a></code> Extends to 3D space applying the Carter Bays 4555 rule (Survival: 4-5 neighbors, Reproduction: exactly 5 neighbors).</li>
+</ul>
+</li>
+<li><b>High-Performance Topology &amp; Halo Exchange</b>: Features an advanced <code><a class="el" href="classmpi__array_1_1array__cartesian.html" title="Prividing an array on MPI_Cartesian topological layout.">mpi_array::array_cartesian</a></code> container. It manages local/global array shapes <code><a class="el" href="structmulti__array_1_1multi__array__shape.html" title="Represents the shape of a multi-dimensional array.">multi_array::multi_array_shape</a></code> and supports automated MPI datatype creation for blocking (<code>MPI_Sendrecv</code>) and non-blocking halo exchanges.</li>
+<li><b>Parallel Binary I/O</b>: Implements highly efficient distributed file writing using <code>MPI_File_write_all</code> via MPI-IO and custom subarrays, enabling fast dumps of Cartesian data grids to disk.</li>
+<li><b>Modern C++ Utilities</b>: Includes a lightweight N-dimensional array container (<code><a class="el" href="namespacemulti__array.html" title="includes">multi_array</a></code>) with multi-index access, compile-time C++ to MPI datatype deduction mapping, and a C++20 span-compatible random number generator.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Prerequisites</h2>
+<ul>
+<li>A C++ compiler fully supporting C++20 standards (GCC, Clang, etc.).</li>
+<li>An MPI library implementation (e.g., OpenMPI, MPICH).</li>
+<li>CMake (Minimum version 3.15).</li>
+<li>_(Optional)_ Doxygen and Graphviz for API documentation generation.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Build Instructions</h2>
+<p>The project uses CMake as its build system. Compilation definitions such as grid dimensions and data types can be overridden via CMake cache variables:</p>
+<div class="fragment"><div class="line">mkdir build &amp;&amp; cd build</div>
+<div class="line"># Configure the project with custom dimensions and data types</div>
+<div class="line">cmake .. -DCMAKE_BUILD_TYPE=Release \</div>
+<div class="line">         -DDIM_X=1024 -DDIM_Y=1024 -DDIM_Z=128 \</div>
+<div class="line">         -DDATA_TYPE=&quot;uint8_t&quot;</div>
+<div class="line"> </div>
+<div class="line"># Build the executables</div>
+<div class="line">cmake --build . -j 4</div>
+</div><!-- fragment --><p><em>Note: Valid <code>DATA_TYPE</code> options include <code>uint8_t</code>, <code>uint16_t</code>, <code>int</code>, <code>float</code>, <code>double</code>, and <code>long</code> as explicitly instantiated in the MPI-IO module.</em></p>
+<h2><a class="anchor" id="autotoc_md7"></a>
+Running the Executables</h2>
+<p>Once compiled, three executables are generated:</p>
+<ol type="1">
+<li>**<code>bruck_Alltoall</code>**: Runs the benchmark comparing the custom Bruck algorithm against the standard <code>MPI_Alltoall</code>.</li>
+</ol>
+<div class="fragment"><div class="line"># Note: This specific application is meant to be run with 2 processes</div>
+<div class="line">mpiexec -np 2 ./bruck_Alltoall</div>
+</div><!-- fragment --><ol type="1">
+<li>**<code>conways-game-2D</code>**: Simulates the 2D Game of Life for 200 generations.</li>
+</ol>
+<div class="fragment"><div class="line">mpiexec -np 4 ./conways-game-2D</div>
+</div><!-- fragment --><p><img src="figure/conways_game.gif" alt="" width="400" height="400" class="inline"/></p>
+<ol type="1">
+<li>**<code>conways-game-3D</code>**: Simulates the 3D Game of Life for 100 generations.</li>
+</ol>
+<div class="fragment"><div class="line">mpiexec -np 8 ./conways-game-3D</div>
+</div><!-- fragment --><p><img src="figure/conways_3d.gif" alt="" width="400" height="400" class="inline"/></p>
+<h2><a class="anchor" id="autotoc_md8"></a>
+Automated Benchmarks</h2>
+<p>The repository includes Bash scripts to automate compilation, execution, and performance data extraction (saved to CSV files) across varying problem sizes and process counts:</p>
+<ul>
+<li><code>benchmark_bruck2D.sh</code> &amp; <code>benchmark_bruck3D.sh</code>: the Bruck collective communication time.</li>
+<li><code>benchmark_conways2D.sh</code>: Benchmarks the total execution time of the 2D Game of Life evolution.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Getting Documentation</h2>
+<p>Execute Doxygen in the root directory to generate HTML and LaTeX documentation:</p>
+<div class="fragment"><div class="line">doxygen Doxyfile</div>
+</div><!-- fragment --><hr  />
+<p><a class="anchor" id="chinese-version"></a></p>
+<h1><a class="anchor" id="autotoc_md11"></a>
+描述</h1>
+<div class="fragment"></div><!-- fragment --> </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
