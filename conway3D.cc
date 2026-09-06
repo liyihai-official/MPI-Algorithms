@@ -5,6 +5,12 @@
 /// @author Yihai Li
 /// @date Sept. 4 2026
 ///
+/// @note Any live cell with fewer than 4 live neighbours dies, as if by
+///       underpopulation (Bays-Durham Rule 4555).
+///         1. Any live cell with fewer than 4 live neighbours dies, as if by underpopulation.
+///         2. Any live cell with 4 or 5 live neighbours lives on to the next generation.
+///         3. Any live cell with more than 5 live neighbours dies, as if by overpopulation.
+///         4. Any dead cell with exactly 5 live neighbours becomes a live cell, as if by reproduction.
 ///
 
 /// includes
@@ -155,7 +161,7 @@ void evolve(mpi_array::array_cartesian<ELEMENT_TYPE, DIMENSIONS>& grid)
         {
           next(i, j, k) = (alive_neighbors == 4 || alive_neighbors == 5) ? 1 : 0;
         }
-        // Rule 3 & 4: Any dead cell with exactly 3 live neighbors becomes a live cell.
+        // Rule 3 & 4: Any dead cell with exactly 5 live neighbors becomes a live cell.
         else
         {
           next(i, j, k) = (alive_neighbors == 5) ? 1 : 0;

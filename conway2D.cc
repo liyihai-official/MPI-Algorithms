@@ -5,6 +5,12 @@
 /// @author Yihai Li
 /// @date Sept. 4 2026
 ///
+/// @note Any live cell with fewer than 2 live neighbours dies, as if by
+///       underpopulation.
+///         1. Any live cell with fewer than 2 live neighbours dies, as if by underpopulation.
+///         2. Any live cell with 2 or 3 live neighbours lives on to the next generation.
+///         3. Any live cell with more than 3 live neighbours dies, as if by overpopulation.
+///         4. Any dead cell with exactly 3 live neighbours becomes a live cell, as if by reproduction.
 ///
 
 /// includes
@@ -21,8 +27,6 @@
 
 constexpr int SEED{2027}, NUM_GENERATION{200};
 constexpr size_t DIMENSIONS{2};
-
-// typedef uint8_t ELEMENT_TYPE;
 
 /// Problem Size
 #if !defined(DIM_X) || !defined(DIM_Y)
