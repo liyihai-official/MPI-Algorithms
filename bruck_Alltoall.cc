@@ -16,7 +16,7 @@
 #include "mpi/bruck.hpp"
 
 /// using datatypes
-using value_type = double;
+using value_type = float;
 using size_type = size_t;
 
 /// Random Seed
@@ -26,7 +26,7 @@ constexpr int SEED{2027};
 #if !defined(DIM_X) || !defined(DIM_Y) || !defined(DIM_Z)
 #define DIM_X 1024
 #define DIM_Y 1024
-#define DIM_Z 1024
+#define DIM_Z 128
 #endif
 
 int main(int argc, char** argv)
@@ -130,7 +130,7 @@ int main(int argc, char** argv)
               << " s\n";
     std::cout << "MPI_Alltoall avg. time consumption: "
               << avg_time_mpi
-              << " s\n";
+              << " s";
     std::cout << std::endl;
   }
 
@@ -146,7 +146,7 @@ int main(int argc, char** argv)
   // {
   //   if (rank == i)
   //   {
-  //     std::cout << "========== 交换后: 进程 " << rank << " diff ==========\n";
+  //     std::cout << "========== After: proc " << rank << " diff ==========\n";
   //     std::cout << diff << std::endl;
   //   }
   //   MPI_Barrier(MPI_COMM_WORLD);
