@@ -156,8 +156,8 @@ std::ostream& operator<<(
       for (size_t i = 0; i < arr.shape().dims[current_dim]; ++i)
       {
         os << std::fixed
-           << std::setprecision(0)
-           << std::setw(6)
+           << std::setprecision(6)
+           << std::setw(10)
            << arr[offset + i];
       }
       // os << " |\n";
@@ -179,6 +179,41 @@ std::ostream& operator<<(
 
   return os;
 }
+
+#include <concepts>
+#include <type_traits>
+
+///
+/// @brief Sums a list of arrays into a single scalar value.
+/// @tparam T element data type.
+/// @tparam NumD number of dimensions of the arrays.
+/// @tparam Args types of the remaining array arguments.
+/// @param first first multi-dimensional array.
+/// @param rest remaining multi-dimensional arrays.
+/// @return A single scalar value representing the total sum
+///          of all elements.
+///
+template <typename T, size_t NumD, typename... Args>
+  requires(std::same_as<
+             std::remove_cvref_t<Args>,
+             multi_array::array<T, NumD> > &&
+           ...)
+T sum(const multi_array::array<T, NumD>& first,
+      const Args&... rest)
+{
+  T total_sum{0};
+
+  for (size_t i = 0; i < first.size(); ++i) total_sum += first[i];
+
+  (..., [&]()
+   {
+    for(size_t i = 0; i < rest.size(); ++i) {
+      total_sum += rest[i];
+    } }());
+
+  return total_sum;
+}
+
 }  // end of namespace multi_array
 
 #include "multiarray.inl"
