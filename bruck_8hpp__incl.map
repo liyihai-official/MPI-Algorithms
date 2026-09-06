@@ -1,42 +1,43 @@
 <map id="include/mpi/bruck.hpp" name="include/mpi/bruck.hpp">
-<area shape="rect" id="Node000001" title="The implementation of the Bruck algorithm demonstration." alt="" coords="243,5,410,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="124,152,183,177"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="253,33,208,51,187,64,170,80,162,93,157,108,154,138,149,137,152,107,157,91,166,77,184,60,205,46,251,28"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="600,79,667,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="379,28,587,76,586,81,378,33"/>
-<area shape="rect" id="Node000004" href="$type_8hpp.html" title="get mpi datatypes based on given C datatype." alt="" coords="181,79,289,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="314,33,262,72,259,68,310,29"/>
-<area shape="rect" id="Node000006" href="$multiarray_8hpp.html" title="This file provides a multi&#45;dimensional array and its shape templates." alt="" coords="266,152,382,177"/>
-<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="329,31,327,138,322,138,324,31"/>
-<area shape="rect" id="Node000014" href="$randin_8hpp.html" title=" " alt="" coords="485,79,576,104"/>
-<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="360,28,486,72,484,77,359,33"/>
-<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="223,106,179,145,175,141,220,102"/>
+<area shape="rect" id="Node000001" title="The implementation of the Bruck algorithm demonstration." alt="" coords="263,5,430,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="144,152,203,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="273,33,228,51,207,64,190,80,182,93,177,108,174,138,169,137,172,107,177,91,186,77,204,60,225,46,271,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="619,79,685,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="399,28,606,76,604,81,397,33"/>
+<area shape="rect" id="Node000004" href="$type_8hpp.html" title="get mpi datatypes based on given C datatype." alt="" coords="201,79,309,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="334,33,282,72,279,68,330,29"/>
+<area shape="rect" id="Node000006" href="$multiarray_8hpp.html" title="This file provides a multi&#45;dimensional array and its shape templates." alt="" coords="286,152,402,177"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="349,31,347,138,342,138,344,31"/>
+<area shape="rect" id="Node000015" href="$randin_8hpp.html" title=" " alt="" coords="504,79,595,104"/>
+<area shape="poly" id="edge16_Node000001_Node000015" title=" " alt="" coords="380,28,505,72,503,77,378,33"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="243,106,199,145,195,141,240,102"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="5,225,72,251"/>
-<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="235,105,222,141,211,161,196,179,177,192,150,204,86,226,84,221,148,199,175,187,193,175,207,158,218,139,230,103"/>
-<area shape="poly" id="edge11_Node000006_Node000005" title=" " alt="" coords="279,180,86,228,85,222,277,175"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="255,105,243,141,232,162,216,179,165,201,86,226,85,220,164,196,213,175,227,159,238,139,250,103"/>
+<area shape="poly" id="edge11_Node000006_Node000005" title=" " alt="" coords="293,180,86,228,85,222,292,175"/>
 <area shape="rect" id="Node000007" title=" " alt="" coords="603,225,688,251"/>
-<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="376,175,590,222,589,227,375,180"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="429,225,485,251"/>
-<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="347,175,425,216,422,221,344,180"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="509,225,579,251"/>
-<area shape="poly" id="edge9_Node000006_Node000009" title=" " alt="" coords="360,175,497,219,496,224,359,180"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="393,175,590,221,589,226,392,180"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="229,225,285,251"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="332,179,284,219,280,214,328,175"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="309,225,379,251"/>
+<area shape="poly" id="edge9_Node000006_Node000009" title=" " alt="" coords="347,178,347,212,341,212,341,178"/>
 <area shape="rect" id="Node000010" title=" " alt="" coords="712,225,792,251"/>
-<area shape="poly" id="edge10_Node000006_Node000010" title=" " alt="" coords="383,173,395,175,545,197,699,223,698,228,545,202,394,180,382,178"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="96,225,171,251"/>
-<area shape="poly" id="edge12_Node000006_Node000011" title=" " alt="" coords="294,180,178,223,176,218,292,175"/>
-<area shape="rect" id="Node000012" title=" " alt="" coords="195,225,272,251"/>
-<area shape="poly" id="edge13_Node000006_Node000012" title=" " alt="" coords="311,179,261,219,257,214,308,175"/>
-<area shape="rect" id="Node000013" href="$multiarray_8inl.html" title="This file contains the implementation of the multi&#45;dimensional array class and its associated shape c..." alt="" coords="297,225,405,251"/>
-<area shape="poly" id="edge14_Node000006_Node000013" title=" " alt="" coords="331,177,344,212,339,214,326,179"/>
-<area shape="poly" id="edge22_Node000014_Node000006" title=" " alt="" coords="498,107,371,150,370,145,497,101"/>
-<area shape="poly" id="edge16_Node000014_Node000007" title=" " alt="" coords="573,102,634,123,660,136,677,150,683,167,681,184,666,215,661,213,676,183,677,167,672,154,657,141,632,128,571,107"/>
-<area shape="poly" id="edge17_Node000014_Node000010" title=" " alt="" coords="573,102,644,124,677,137,699,150,726,180,744,211,740,214,722,183,696,154,674,142,642,129,571,107"/>
-<area shape="rect" id="Node000015" title=" " alt="" coords="789,152,861,177"/>
-<area shape="poly" id="edge18_Node000014_Node000015" title=" " alt="" coords="577,101,777,149,776,154,575,106"/>
-<area shape="rect" id="Node000016" title=" " alt="" coords="407,152,460,177"/>
-<area shape="poly" id="edge19_Node000014_Node000016" title=" " alt="" coords="517,106,462,146,459,141,513,102"/>
-<area shape="rect" id="Node000017" title=" " alt="" coords="485,152,577,177"/>
-<area shape="poly" id="edge20_Node000014_Node000017" title=" " alt="" coords="533,104,533,138,528,138,528,104"/>
+<area shape="poly" id="edge10_Node000006_Node000010" title=" " alt="" coords="402,173,699,223,698,228,402,178"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="403,225,477,251"/>
+<area shape="poly" id="edge12_Node000006_Node000011" title=" " alt="" coords="361,175,415,215,412,219,358,180"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="501,225,579,251"/>
+<area shape="poly" id="edge13_Node000006_Node000012" title=" " alt="" coords="376,175,496,218,494,223,375,180"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="817,225,909,251"/>
+<area shape="poly" id="edge14_Node000006_Node000013" title=" " alt="" coords="403,173,415,175,607,198,804,223,803,228,607,203,414,180,402,178"/>
+<area shape="rect" id="Node000014" href="$multiarray_8inl.html" title="This file contains the implementation of the multi&#45;dimensional array class and its associated shape c..." alt="" coords="97,225,205,251"/>
+<area shape="poly" id="edge15_Node000006_Node000014" title=" " alt="" coords="314,180,196,223,194,218,312,175"/>
+<area shape="poly" id="edge23_Node000015_Node000006" title=" " alt="" coords="517,107,391,150,389,145,515,101"/>
+<area shape="poly" id="edge17_Node000015_Node000007" title=" " alt="" coords="596,99,640,117,661,132,677,151,682,167,681,184,666,215,661,213,676,183,677,168,672,153,657,136,638,122,594,104"/>
+<area shape="poly" id="edge18_Node000015_Node000010" title=" " alt="" coords="596,101,647,120,673,133,698,150,725,180,744,212,739,214,721,183,694,154,671,138,645,124,594,106"/>
+<area shape="poly" id="edge21_Node000015_Node000013" title=" " alt="" coords="593,102,658,122,728,150,788,182,837,215,835,220,785,187,726,154,656,127,592,107"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="427,152,499,177"/>
+<area shape="poly" id="edge19_Node000015_Node000016" title=" " alt="" coords="537,106,489,145,486,141,534,102"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="523,152,576,177"/>
+<area shape="poly" id="edge20_Node000015_Node000017" title=" " alt="" coords="552,104,552,138,547,138,547,104"/>
 <area shape="rect" id="Node000018" title=" " alt="" coords="601,152,663,177"/>
-<area shape="poly" id="edge21_Node000014_Node000018" title=" " alt="" coords="548,102,606,142,603,146,545,106"/>
+<area shape="poly" id="edge22_Node000015_Node000018" title=" " alt="" coords="564,102,610,141,606,145,561,106"/>
 </map>

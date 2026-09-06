@@ -1,5 +1,7 @@
 <map id="multi_array::array::size" name="multi_array::array::size">
-<area shape="rect" id="Node000001" title=" " alt="" coords="223,5,361,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="223,35,361,75"/>
 <area shape="rect" id="Node000002" href="$namespacempi__algorithm.html#a5f4db94e91d99d00ce6b9808c7370a5c" title="Bruck&#39;s All&#45;to&#45;All communication algorithm using non&#45;blocking MPI calls." alt="" coords="5,5,175,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,28,175,28,175,23,209,23"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,45,175,40,175,35,209,40"/>
+<area shape="rect" id="Node000003" href="$namespacemulti__array.html#af7bd53edfaf3198c6cbd942f055ee27d" title="Sums a list of arrays into a single scalar value." alt="" coords="24,70,156,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="210,69,156,76,156,71,209,63"/>
 </map>

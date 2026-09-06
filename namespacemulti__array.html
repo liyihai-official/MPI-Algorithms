@@ -115,6 +115,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a538467537407c20779a4dd2a1075cdeb"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemulti__array.html#a538467537407c20779a4dd2a1075cdeb">operator&lt;&lt;</a> (std::ostream &amp;<a class="el" href="classmulti__array_1_1array.html">os</a>, <a class="el" href="classmulti__array_1_1array.html">const</a> <a class="el" href="classmulti__array_1_1array.html">array</a>&lt; <a class="el" href="classmulti__array_1_1array.html">T</a>, <a class="el" href="classmulti__array_1_1array.html">NumD</a> &gt; &amp;<a class="el" href="classmulti__array_1_1array.html">arr</a>)</td></tr>
 <tr class="memdesc:a538467537407c20779a4dd2a1075cdeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads the &lt;&lt; operator for printing the array.  <br /></td></tr>
 <tr class="separator:a538467537407c20779a4dd2a1075cdeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7bd53edfaf3198c6cbd942f055ee27d" id="r_af7bd53edfaf3198c6cbd942f055ee27d"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classmulti__array_1_1array.html">typename</a> <a class="el" href="classmulti__array_1_1array.html">T</a> , <a class="el" href="classmulti__array_1_1array.html">size_t</a> NumD, typename... Args&gt; <br />
+requires (std::same_as&lt; std::remove_cvref_t&lt;<a class="el" href="classmulti__array_1_1array.html">Args</a>&gt;, <a class="el" href="classmulti__array_1_1array.html">multi_array::array</a>&lt;<a class="el" href="classmulti__array_1_1array.html">T</a>, <a class="el" href="classmulti__array_1_1array.html">NumD</a>&gt; &gt; &amp;&amp; ...)</td></tr>
+<tr class="memitem:af7bd53edfaf3198c6cbd942f055ee27d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classmulti__array_1_1array.html">T</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemulti__array.html#af7bd53edfaf3198c6cbd942f055ee27d">sum</a> (<a class="el" href="classmulti__array_1_1array.html">const</a> <a class="el" href="classmulti__array_1_1array.html">multi_array::array</a>&lt; <a class="el" href="classmulti__array_1_1array.html">T</a>, <a class="el" href="classmulti__array_1_1array.html">NumD</a> &gt; &amp;<a class="el" href="classmulti__array_1_1array.html">first</a>, <a class="el" href="classmulti__array_1_1array.html">const</a> <a class="el" href="classmulti__array_1_1array.html">Args</a> &amp;... <a class="el" href="classmulti__array_1_1array.html">rest</a>)</td></tr>
+<tr class="memdesc:af7bd53edfaf3198c6cbd942f055ee27d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sums a list of arrays into a single scalar value.  <br /></td></tr>
+<tr class="separator:af7bd53edfaf3198c6cbd942f055ee27d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>includes </p>
@@ -172,6 +177,65 @@ Here is the call graph for this function:</div>
 <area shape="rect" title="Overloads the &lt;&lt; operator for printing the array." alt="" coords="5,13,187,38"/>
 <area shape="rect" href="classmulti__array_1_1array.html#a89992a71529c8e36a490f732ee6962f4" title=" " alt="" coords="235,5,373,45"/>
 <area shape="poly" title=" " alt="" coords="187,23,221,23,221,28,187,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af7bd53edfaf3198c6cbd942f055ee27d" name="af7bd53edfaf3198c6cbd942f055ee27d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7bd53edfaf3198c6cbd942f055ee27d">&#9670;&#160;</a></span>sum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classmulti__array_1_1array.html">typename</a> <a class="el" href="classmulti__array_1_1array.html">T</a> , <a class="el" href="classmulti__array_1_1array.html">size_t</a> NumD, typename... Args&gt; <br />
+requires (std::same_as&lt; std::remove_cvref_t&lt;<a class="el" href="classmulti__array_1_1array.html">Args</a>&gt;, <a class="el" href="classmulti__array_1_1array.html">multi_array::array</a>&lt;<a class="el" href="classmulti__array_1_1array.html">T</a>, <a class="el" href="classmulti__array_1_1array.html">NumD</a>&gt; &gt; &amp;&amp; ...)</div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmulti__array_1_1array.html">T</a> multi_array::sum </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmulti__array_1_1array.html">const</a> <a class="el" href="classmulti__array_1_1array.html">multi_array::array</a>&lt; <a class="el" href="classmulti__array_1_1array.html">T</a>, <a class="el" href="classmulti__array_1_1array.html">NumD</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmulti__array_1_1array.html">const</a> <a class="el" href="classmulti__array_1_1array.html">Args</a> &amp;...&#160;</td>
+          <td class="paramname"><em>rest</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sums a list of arrays into a single scalar value. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>element data type. </td></tr>
+    <tr><td class="paramname">NumD</td><td>number of dimensions of the arrays. </td></tr>
+    <tr><td class="paramname">Args</td><td>types of the remaining array arguments. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">first</td><td>first multi-dimensional array. </td></tr>
+    <tr><td class="paramname">rest</td><td>remaining multi-dimensional arrays. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A single scalar value representing the total sum of all elements. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemulti__array_af7bd53edfaf3198c6cbd942f055ee27d_cgraph.png" border="0" usemap="#anamespacemulti__array_af7bd53edfaf3198c6cbd942f055ee27d_cgraph" alt=""/></div>
+<map name="anamespacemulti__array_af7bd53edfaf3198c6cbd942f055ee27d_cgraph" id="anamespacemulti__array_af7bd53edfaf3198c6cbd942f055ee27d_cgraph">
+<area shape="rect" title="Sums a list of arrays into a single scalar value." alt="" coords="5,13,137,38"/>
+<area shape="rect" href="classmulti__array_1_1array.html#aea580ad7afbdc7217283fab14009a3e1" title=" " alt="" coords="185,5,324,45"/>
+<area shape="poly" title=" " alt="" coords="137,23,171,23,171,28,137,28"/>
 </map>
 </div>
 
