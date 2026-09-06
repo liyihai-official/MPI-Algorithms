@@ -24,7 +24,7 @@ constexpr size_t DIMENSIONS{2};
 
 // typedef uint8_t ELEMENT_TYPE;
 
-/// Problem Size + Boundaries
+/// Problem Size
 #if !defined(DIM_X) || !defined(DIM_Y)
 #define DIM_X 300
 #define DIM_Y 300

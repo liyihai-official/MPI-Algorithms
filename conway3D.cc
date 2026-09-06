@@ -21,9 +21,8 @@
 
 constexpr int SEED{2027}, NUM_GENERATION{100};
 constexpr size_t DIMENSIONS{3};
-// typedef uint8_t ELEMENT_TYPE;
 
-/// Problem Size + Boundaries
+/// Problem Size
 #if !defined(DIM_X) || !defined(DIM_Y) || !defined(DIM_Z)
 #define DIM_X 124
 #define DIM_Y 124
