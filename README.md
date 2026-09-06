@@ -42,9 +42,9 @@ both 2D (`conway2D.cc`) and 3D (`conway3D.cc`) parallel Conway's Game of Life.
   via MPI-IO and custom subarrays, enabling fast dumps of Cartesian data
   grids to disk.
 - **Modern C++ Utilities**:
-  Includes a lightweight N-dimensional array container (`multi_array`) with
-  multi-index access, compile-time C++ to MPI datatype deduction mapping,
-  and a C++20 span-compatible random number generator.
+  Includes a lightweight N-dimensional array container (`multi_array::array`)
+  with multi-index access, compile-time C++ to MPI datatype deduction mapping,
+  and a C++20 span-compatible random number generator `array_randomizer`.
 
 ### Prerequisites
 
