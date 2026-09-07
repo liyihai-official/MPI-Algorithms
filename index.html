@@ -161,6 +161,15 @@ Automated Benchmarks</h2>
 <ul>
 <li><code>benchmark_bruck2D.sh</code> &amp; <code>benchmark_bruck3D.sh</code>: the Bruck collective communication time.</li>
 <li><code>benchmark_conways2D.sh</code>: Benchmarks the total execution time of the 2D Game of Life evolution.</li>
+<li>Below is sample results showing a comparison of time consumption between <code><a class="el" href="namespacempi__algorithm.html#a5f4db94e91d99d00ce6b9808c7370a5c" title="Bruck&#39;s All-to-All communication algorithm using non-blocking MPI calls.">mpi_algorithm::Bruck_Alltoall_noneblocking</a></code> and <code>MPI_Alltoall</code> on given following specifications.<ul>
+<li>Ubuntu 20.0.4</li>
+<li>GCC 15.0</li>
+<li>OpenMPI</li>
+<li>CMake.</li>
+<li>CPU: <code>AMD R9-8945H</code></li>
+<li>Memory: <code>ADATA DDR5 5600MHz 32GB</code>*2</li>
+</ul>
+</li>
 </ul>
 <p><img src="figure/bruck_vs_mpi_2D_3D_merged.png" alt="" width="1000" height="750" class="inline"/></p>
 <h2><a class="anchor" id="autotoc_md9"></a>
