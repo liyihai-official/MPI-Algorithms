@@ -116,7 +116,7 @@ problem sizes and process counts:
 - `benchmark_conways2D.sh`:
   Benchmarks the total execution time of the 2D Game of Life evolution.
 
-<img src="figure/bruck_vs_mpi_2D_3D_merged.png" width="1200" height="900" />
+<img src="figure/bruck_vs_mpi_2D_3D_merged.png" width="1200" height="900"/>
 
 ### Getting Documentation
 
