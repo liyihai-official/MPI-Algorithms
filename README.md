@@ -116,6 +116,16 @@ problem sizes and process counts:
 - `benchmark_conways2D.sh`:
   Benchmarks the total execution time of the 2D Game of Life evolution.
 
+- Below is sample results showing a comparison of
+  time consumption between `mpi_algorithm::Bruck_Alltoall_noneblocking`
+  and `MPI_Alltoall` on given following specifications.
+  - Ubuntu 20.0.4
+  - GCC 15.0
+  - OpenMPI
+  - CMake.
+  - CPU: `AMD R9-8945H`
+  - Memory: `ADATA DDR5 5600MHz 32GB`\*2
+
 <img src="figure/bruck_vs_mpi_2D_3D_merged.png" width="1000" height="750"/>
 
 ### Getting Documentation
