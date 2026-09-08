@@ -119,11 +119,19 @@ problem sizes and process counts:
 - Below is sample results showing a comparison of
   time consumption between `mpi_algorithm::Bruck_Alltoall_noneblocking`
   and `MPI_Alltoall` on given following specifications.
-  - Ubuntu 20.0.4
-  - GCC 15.0
+  - Ubuntu 26.0.4 LTS
+  - GCC 15.2.0
   - OpenMPI
-  - CMake.
+  - CMake 4.2.3
   - CPU: `AMD R9-8945H`
+    - Clockspeed: 4.0 GHz; Turbo Speed: 5.2 GHz
+    - Cache
+      - L1 Instruction Cache: 8 x 32 KB
+      - L1 Data Cache: 8 x 32 KB
+      - L2 Cache: 8 x 1024 KB
+      - L3 Cache: 16 MB
+    - Cores: 8 Threads: 16
+
   - Memory: `ADATA DDR5 5600MHz 32GB`\*2
 
 <img src="figure/bruck_vs_mpi_2D_3D_merged.png" width="1000" height="750"/>
