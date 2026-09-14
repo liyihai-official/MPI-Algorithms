@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['shape_0',['shape',['../classmulti__array_1_1array.html#a89992a71529c8e36a490f732ee6962f4',1,'multi_array::array']]],
-  ['size_1',['size',['../classmulti__array_1_1array.html#aea580ad7afbdc7217283fab14009a3e1',1,'multi_array::array']]],
-  ['sum_2',['sum',['../namespacemulti__array.html#af7bd53edfaf3198c6cbd942f055ee27d',1,'multi_array']]],
-  ['swap_3',['swap',['../classmulti__array_1_1array.html#a7c73529a74daded84260be6abbffa28d',1,'multi_array::array']]]
+  ['print_5falltoallv_5fin_5forder_0',['print_alltoallv_in_order',['../namespacempi__io.html#a4f2d7e91f306b47c841068382a1ee7a7',1,'mpi_io']]],
+  ['print_5fin_5forder_1',['print_in_order',['../namespacempi__io.html#aefec48e6582811451aa2dd1252a78129',1,'mpi_io']]],
+  ['print_5fmultiarray_5fin_5forder_2',['print_multiarray_in_order',['../namespacempi__io.html#a89b12a7e61e6fca37b25740a88da16fe',1,'mpi_io']]]
 ];

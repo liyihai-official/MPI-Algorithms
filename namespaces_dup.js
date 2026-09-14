@@ -1,10 +1,15 @@
 var namespaces_dup =
 [
     [ "mpi_algorithm", "namespacempi__algorithm.html", [
+      [ "Alltoallv_2d_example", "namespacempi__algorithm.html#a7c5e18744fdbd971c238d14bf147eb50", null ],
+      [ "Alltoallv_example", "namespacempi__algorithm.html#a5ccccb65a5de06126cbbb26574c2ffb9", null ],
       [ "Bruck_Alltoall_noneblocking", "namespacempi__algorithm.html#a5f4db94e91d99d00ce6b9808c7370a5c", null ]
     ] ],
     [ "mpi_array", "namespacempi__array.html", "namespacempi__array" ],
     [ "mpi_io", "namespacempi__io.html", [
+      [ "print_alltoallv_in_order", "namespacempi__io.html#a4f2d7e91f306b47c841068382a1ee7a7", null ],
+      [ "print_in_order", "namespacempi__io.html#aefec48e6582811451aa2dd1252a78129", null ],
+      [ "print_multiarray_in_order", "namespacempi__io.html#a89b12a7e61e6fca37b25740a88da16fe", null ],
       [ "write_array_Cartesian_io_binary", "namespacempi__io.html#a6789d78447c776ae7e780341cad3f4a0", null ]
     ] ],
     [ "mpi_topology", "namespacempi__topology.html", "namespacempi__topology" ],

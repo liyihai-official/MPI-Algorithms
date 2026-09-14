@@ -60,8 +60,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"plot__bruck_8py.html#aee0df2ed9fdda590294b2f7ac815823d"
+"alltoall__examples_8cc.html",
+"plot__bruck_8py.html#a392f2912ec68eb49db4811defa0bd1a0"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

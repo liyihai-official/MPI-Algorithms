@@ -1,0 +1,14 @@
+<map id="mpi_io::print_alltoallv_in_order" name="mpi_io::print_alltoallv_in_order">
+<area shape="rect" id="Node000001" title="Print each packed Alltoallv block with peer, count and flat indices." alt="" coords="561,69,725,109"/>
+<area shape="rect" id="Node000002" href="$namespacempi__algorithm.html#a5ccccb65a5de06126cbbb26574c2ffb9" title="Each rank sends rank + 2 * dest + 1 elements to dest." alt="" coords="335,69,513,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="548,92,513,92,513,87,548,87"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="461,58,448,51,424,48,403,50,390,55,386,61,388,68,383,70,381,60,387,50,402,45,424,43,450,46,464,53"/>
+<area shape="rect" id="Node000003" href="$namespacempi__algorithm.html#a7c5e18744fdbd971c238d14bf147eb50" title="All ranks send 1, 2, 3 and 4 rows to ranks 0, 1, 2 and 3." alt="" coords="108,5,287,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="338,68,268,48,269,43,340,63"/>
+<area shape="rect" id="Node000004" href="$namespacempi__algorithm.html#a5f4db94e91d99d00ce6b9808c7370a5c" title="Bruck&#39;s All&#45;to&#45;All communication algorithm using non&#45;blocking MPI calls." alt="" coords="113,69,282,109"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="321,92,282,92,282,87,321,87"/>
+<area shape="rect" id="Node000006" href="$alltoallv__example_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Four&#45;process variable&#45;count exchange using the project&#39;s containers. Build: mpicxx &#45;std=c++20 &#45;O2 &#45;I/..." alt="" coords="170,134,225,159"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="332,115,226,143,224,137,330,110"/>
+<area shape="rect" id="Node000005" href="$bruck__Alltoall_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,77,60,102"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="99,92,60,92,60,87,99,87"/>
+</map>

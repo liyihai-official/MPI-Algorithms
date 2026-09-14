@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['main_0',['main',['../conway3D_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;conway3D.cc'],['../conway2D_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;conway2D.cc'],['../bruck__Alltoall_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;bruck_Alltoall.cc']]],
+  ['main_0',['main',['../conway3D_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;conway3D.cc'],['../conway2D_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;conway2D.cc'],['../bruck__Alltoall_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;bruck_Alltoall.cc'],['../alltoallv__example__02_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;alltoallv_example_02.cc'],['../alltoallv__example_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;alltoallv_example.cc']]],
   ['marker_1',['marker',['../namespaceplot__bruck.html#a466be56e6eb810f3e125515faae8739c',1,'plot_bruck']]],
   ['mpi_20algorithms_3a_20bruck_20all_20to_20all_20conway_20s_20game_20of_20life_2',['MPI-Algorithms: Bruck All-to-all &amp; Conway&apos;s Game of Life',['../index.html',1,'']]],
   ['mpi_5falgorithm_3',['mpi_algorithm',['../namespacempi__algorithm.html',1,'']]],

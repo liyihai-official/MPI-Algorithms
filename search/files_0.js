@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['bruck_2ehpp_0',['bruck.hpp',['../bruck_8hpp.html',1,'']]],
-  ['bruck_5falltoall_2ecc_1',['bruck_Alltoall.cc',['../bruck__Alltoall_8cc.html',1,'']]]
+  ['alltoall_5fexamples_2ecc_0',['alltoall_examples.cc',['../alltoall__examples_8cc.html',1,'']]],
+  ['alltoalll_5fexamples_2ehpp_1',['alltoalll_examples.hpp',['../alltoalll__examples_8hpp.html',1,'']]],
+  ['alltoallv_5fexample_2ecc_2',['alltoallv_example.cc',['../alltoallv__example_8cc.html',1,'']]],
+  ['alltoallv_5fexample_5f02_2ecc_3',['alltoallv_example_02.cc',['../alltoallv__example__02_8cc.html',1,'']]]
 ];

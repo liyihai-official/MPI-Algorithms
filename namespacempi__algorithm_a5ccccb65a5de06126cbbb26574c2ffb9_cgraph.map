@@ -1,0 +1,10 @@
+<map id="mpi_algorithm::Alltoallv_example" name="mpi_algorithm::Alltoallv_example">
+<area shape="rect" id="Node000001" title="Each rank sends rank + 2 * dest + 1 elements to dest." alt="" coords="5,37,184,77"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="52,38,50,28,57,18,72,13,95,11,121,14,136,21,133,26,120,19,95,16,73,18,60,23,55,29,57,36"/>
+<area shape="rect" id="Node000002" href="$namespacempi__io.html#a4f2d7e91f306b47c841068382a1ee7a7" title="Print each packed Alltoallv block with peer, count and flat indices." alt="" coords="239,5,403,45"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="184,42,225,36,226,41,185,47"/>
+<area shape="rect" id="Node000004" href="$namespacempi__io.html#a89b12a7e61e6fca37b25740a88da16fe" title=" " alt="" coords="232,69,411,109"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="185,67,219,72,218,77,184,73"/>
+<area shape="rect" id="Node000003" href="$namespacempi__io.html#aefec48e6582811451aa2dd1252a78129" title="Collect local text and print it on rank 0 in communicator rank order." alt="" coords="459,13,623,38"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="403,23,445,23,445,28,403,28"/>
+</map>

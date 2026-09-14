@@ -1,0 +1,12 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title="Exchange variable numbers of complete rows from local 2D matrices. Build: mpicxx &#45;std=c++20 &#45;O2 &#45;I/pa..." alt="" coords="5,45,60,70"/>
+<area shape="rect" id="Node000002" href="$namespacempi__algorithm.html#a5ccccb65a5de06126cbbb26574c2ffb9" title="Each rank sends rank + 2 * dest + 1 elements to dest." alt="" coords="108,37,287,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,55,95,55,95,60,60,60"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="166,37,164,28,169,19,180,13,197,11,217,14,227,21,224,25,215,19,197,16,182,18,173,22,170,29,171,36"/>
+<area shape="rect" id="Node000003" href="$namespacempi__io.html#a4f2d7e91f306b47c841068382a1ee7a7" title="Print each packed Alltoallv block with peer, count and flat indices." alt="" coords="342,5,506,45"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="287,42,328,36,329,41,288,47"/>
+<area shape="rect" id="Node000005" href="$namespacempi__io.html#a89b12a7e61e6fca37b25740a88da16fe" title=" " alt="" coords="335,69,513,109"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="288,67,322,72,321,77,287,73"/>
+<area shape="rect" id="Node000004" href="$namespacempi__io.html#aefec48e6582811451aa2dd1252a78129" title="Collect local text and print it on rank 0 in communicator rank order." alt="" coords="561,13,725,38"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="506,23,548,23,548,28,506,28"/>
+</map>

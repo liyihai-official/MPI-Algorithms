@@ -1,0 +1,17 @@
+<map id="mpi_io::print_in_order" name="mpi_io::print_in_order">
+<area shape="rect" id="Node000001" title="Collect local text and print it on rank 0 in communicator rank order." alt="" coords="773,50,937,75"/>
+<area shape="rect" id="Node000002" href="$namespacempi__algorithm.html#a7c5e18744fdbd971c238d14bf147eb50" title="All ranks send 1, 2, 3 and 4 rows to ranks 0, 1, 2 and 3." alt="" coords="108,5,287,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="759,60,287,33,287,28,760,55"/>
+<area shape="rect" id="Node000003" href="$namespacempi__io.html#a4f2d7e91f306b47c841068382a1ee7a7" title="Print each packed Alltoallv block with peer, count and flat indices." alt="" coords="561,71,725,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="760,78,726,83,725,77,759,73"/>
+<area shape="rect" id="Node000004" href="$namespacempi__algorithm.html#a5ccccb65a5de06126cbbb26574c2ffb9" title="Each rank sends rank + 2 * dest + 1 elements to dest." alt="" coords="335,83,513,123"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="548,99,514,100,513,95,548,93"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="351,81,256,48,258,43,352,76"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="461,71,448,64,424,61,403,63,390,68,386,74,388,82,383,83,381,73,387,64,402,58,424,56,450,59,464,66"/>
+<area shape="rect" id="Node000005" href="$namespacempi__algorithm.html#a5f4db94e91d99d00ce6b9808c7370a5c" title="Bruck&#39;s All&#45;to&#45;All communication algorithm using non&#45;blocking MPI calls." alt="" coords="113,77,282,117"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="321,103,282,102,282,97,321,98"/>
+<area shape="rect" id="Node000007" href="$alltoallv__example_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Four&#45;process variable&#45;count exchange using the project&#39;s containers. Build: mpicxx &#45;std=c++20 &#45;O2 &#45;I/..." alt="" coords="170,142,225,167"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="324,128,226,151,224,146,322,123"/>
+<area shape="rect" id="Node000006" href="$bruck__Alltoall_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,85,60,110"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="99,100,60,100,60,95,99,95"/>
+</map>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['conway2d_2ecc_0',['conway2D.cc',['../conway2D_8cc.html',1,'']]],
-  ['conway3d_2ecc_1',['conway3D.cc',['../conway3D_8cc.html',1,'']]]
+  ['bruck_2ehpp_0',['bruck.hpp',['../bruck_8hpp.html',1,'']]],
+  ['bruck_5falltoall_2ecc_1',['bruck_Alltoall.cc',['../bruck__Alltoall_8cc.html',1,'']]]
 ];

@@ -105,10 +105,222 @@ Functions</h2></td></tr>
 <tr class="memitem:a6789d78447c776ae7e780341cad3f4a0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacempi__io.html#a6789d78447c776ae7e780341cad3f4a0">write_array_Cartesian_io_binary</a> (const <a class="el" href="classmpi__array_1_1array__cartesian.html">mpi_array::array_cartesian</a>&lt; T, NumD &gt; &amp;array, const std::string &amp;filename)</td></tr>
 <tr class="memdesc:a6789d78447c776ae7e780341cad3f4a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write Cartesian distributed array to file in binary using MPI-IO <code>MPI_File_write_all</code> .  <br /></td></tr>
 <tr class="separator:a6789d78447c776ae7e780341cad3f4a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefec48e6582811451aa2dd1252a78129" id="r_aefec48e6582811451aa2dd1252a78129"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacempi__io.html#aefec48e6582811451aa2dd1252a78129">print_in_order</a> (const std::string &amp;local_text, MPI_Comm comm, const std::string &amp;title=&quot;&quot;)</td></tr>
+<tr class="memdesc:aefec48e6582811451aa2dd1252a78129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collect local text and print it on rank 0 in communicator rank order.  <br /></td></tr>
+<tr class="separator:aefec48e6582811451aa2dd1252a78129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89b12a7e61e6fca37b25740a88da16fe" id="r_a89b12a7e61e6fca37b25740a88da16fe"><td class="memTemplParams" colspan="2">template&lt;typename T , size_t NumD&gt; </td></tr>
+<tr class="memitem:a89b12a7e61e6fca37b25740a88da16fe"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacempi__io.html#a89b12a7e61e6fca37b25740a88da16fe">print_multiarray_in_order</a> (const <a class="el" href="classmulti__array_1_1array.html">multi_array::array</a>&lt; T, NumD &gt; &amp;arr, MPI_Comm comm)</td></tr>
+<tr class="separator:a89b12a7e61e6fca37b25740a88da16fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f2d7e91f306b47c841068382a1ee7a7" id="r_a4f2d7e91f306b47c841068382a1ee7a7"><td class="memTemplParams" colspan="2">template&lt;typename T , size_t NumD&gt; </td></tr>
+<tr class="memitem:a4f2d7e91f306b47c841068382a1ee7a7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacempi__io.html#a4f2d7e91f306b47c841068382a1ee7a7">print_alltoallv_in_order</a> (const <a class="el" href="classmulti__array_1_1array.html">multi_array::array</a>&lt; T, NumD &gt; &amp;arr, const <a class="el" href="classmulti__array_1_1array.html">multi_array::array</a>&lt; int, 1 &gt; &amp;counts, const <a class="el" href="classmulti__array_1_1array.html">multi_array::array</a>&lt; int, 1 &gt; &amp;displs, bool sending, MPI_Comm comm)</td></tr>
+<tr class="memdesc:a4f2d7e91f306b47c841068382a1ee7a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print each packed Alltoallv block with peer, count and flat indices.  <br /></td></tr>
+<tr class="separator:a4f2d7e91f306b47c841068382a1ee7a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>includes </p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a4f2d7e91f306b47c841068382a1ee7a7" name="a4f2d7e91f306b47c841068382a1ee7a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f2d7e91f306b47c841068382a1ee7a7">&#9670;&#160;</a></span>print_alltoallv_in_order()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , size_t NumD&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void mpi_io::print_alltoallv_in_order </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmulti__array_1_1array.html">multi_array::array</a>&lt; T, NumD &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classmulti__array_1_1array.html">multi_array::array</a>&lt; int, 1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>counts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classmulti__array_1_1array.html">multi_array::array</a>&lt; int, 1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>displs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>sending</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MPI_Comm&#160;</td>
+          <td class="paramname"><em>comm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print each packed Alltoallv block with peer, count and flat indices. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sending</td><td>True before exchange (to rank); false after (from rank). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>counts and displs must have communicator-size entries and describe valid regions in arr. All processes must call with the same sending flag. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacempi__io_a4f2d7e91f306b47c841068382a1ee7a7_cgraph.png" border="0" usemap="#anamespacempi__io_a4f2d7e91f306b47c841068382a1ee7a7_cgraph" alt=""/></div>
+<map name="anamespacempi__io_a4f2d7e91f306b47c841068382a1ee7a7_cgraph" id="anamespacempi__io_a4f2d7e91f306b47c841068382a1ee7a7_cgraph">
+<area shape="rect" title="Print each packed Alltoallv block with peer, count and flat indices." alt="" coords="5,5,169,45"/>
+<area shape="rect" href="namespacempi__io.html#aefec48e6582811451aa2dd1252a78129" title="Collect local text and print it on rank 0 in communicator rank order." alt="" coords="217,13,381,38"/>
+<area shape="poly" title=" " alt="" coords="170,23,204,23,204,28,170,28"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacempi__io_a4f2d7e91f306b47c841068382a1ee7a7_icgraph.png" border="0" usemap="#anamespacempi__io_a4f2d7e91f306b47c841068382a1ee7a7_icgraph" alt=""/></div>
+<map name="anamespacempi__io_a4f2d7e91f306b47c841068382a1ee7a7_icgraph" id="anamespacempi__io_a4f2d7e91f306b47c841068382a1ee7a7_icgraph">
+<area shape="rect" title="Print each packed Alltoallv block with peer, count and flat indices." alt="" coords="561,69,725,109"/>
+<area shape="rect" href="namespacempi__algorithm.html#a5ccccb65a5de06126cbbb26574c2ffb9" title="Each rank sends rank + 2 * dest + 1 elements to dest." alt="" coords="335,69,513,109"/>
+<area shape="poly" title=" " alt="" coords="548,92,513,92,513,87,548,87"/>
+<area shape="poly" title=" " alt="" coords="461,58,448,51,424,48,403,50,390,55,386,61,388,68,383,70,381,60,387,50,402,45,424,43,450,46,464,53"/>
+<area shape="rect" href="namespacempi__algorithm.html#a7c5e18744fdbd971c238d14bf147eb50" title="All ranks send 1, 2, 3 and 4 rows to ranks 0, 1, 2 and 3." alt="" coords="108,5,287,45"/>
+<area shape="poly" title=" " alt="" coords="338,68,268,48,269,43,340,63"/>
+<area shape="rect" href="namespacempi__algorithm.html#a5f4db94e91d99d00ce6b9808c7370a5c" title="Bruck&#39;s All&#45;to&#45;All communication algorithm using non&#45;blocking MPI calls." alt="" coords="113,69,282,109"/>
+<area shape="poly" title=" " alt="" coords="321,92,282,92,282,87,321,87"/>
+<area shape="rect" href="alltoallv__example_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Four&#45;process variable&#45;count exchange using the project&#39;s containers. Build: mpicxx &#45;std=c++20 &#45;O2 &#45;I/..." alt="" coords="170,134,225,159"/>
+<area shape="poly" title=" " alt="" coords="332,115,226,143,224,137,330,110"/>
+<area shape="rect" href="bruck__Alltoall_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,77,60,102"/>
+<area shape="poly" title=" " alt="" coords="99,92,60,92,60,87,99,87"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aefec48e6582811451aa2dd1252a78129" name="aefec48e6582811451aa2dd1252a78129"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefec48e6582811451aa2dd1252a78129">&#9670;&#160;</a></span>print_in_order()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mpi_io::print_in_order </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>local_text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MPI_Comm&#160;</td>
+          <td class="paramname"><em>comm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>title</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Collect local text and print it on rank 0 in communicator rank order. </p>
+<dl class="section note"><dt>Note</dt><dd>Every process in the intracommunicator must call this function in the same order. The total text per call must fit in an MPI int count. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacempi__io_aefec48e6582811451aa2dd1252a78129_icgraph.png" border="0" usemap="#anamespacempi__io_aefec48e6582811451aa2dd1252a78129_icgraph" alt=""/></div>
+<map name="anamespacempi__io_aefec48e6582811451aa2dd1252a78129_icgraph" id="anamespacempi__io_aefec48e6582811451aa2dd1252a78129_icgraph">
+<area shape="rect" title="Collect local text and print it on rank 0 in communicator rank order." alt="" coords="773,50,937,75"/>
+<area shape="rect" href="namespacempi__algorithm.html#a7c5e18744fdbd971c238d14bf147eb50" title="All ranks send 1, 2, 3 and 4 rows to ranks 0, 1, 2 and 3." alt="" coords="108,5,287,45"/>
+<area shape="poly" title=" " alt="" coords="759,60,287,33,287,28,760,55"/>
+<area shape="rect" href="namespacempi__io.html#a4f2d7e91f306b47c841068382a1ee7a7" title="Print each packed Alltoallv block with peer, count and flat indices." alt="" coords="561,71,725,111"/>
+<area shape="poly" title=" " alt="" coords="760,78,726,83,725,77,759,73"/>
+<area shape="rect" href="namespacempi__algorithm.html#a5ccccb65a5de06126cbbb26574c2ffb9" title="Each rank sends rank + 2 * dest + 1 elements to dest." alt="" coords="335,83,513,123"/>
+<area shape="poly" title=" " alt="" coords="548,99,514,100,513,95,548,93"/>
+<area shape="poly" title=" " alt="" coords="351,81,256,48,258,43,352,76"/>
+<area shape="poly" title=" " alt="" coords="461,71,448,64,424,61,403,63,390,68,386,74,388,82,383,83,381,73,387,64,402,58,424,56,450,59,464,66"/>
+<area shape="rect" href="namespacempi__algorithm.html#a5f4db94e91d99d00ce6b9808c7370a5c" title="Bruck&#39;s All&#45;to&#45;All communication algorithm using non&#45;blocking MPI calls." alt="" coords="113,77,282,117"/>
+<area shape="poly" title=" " alt="" coords="321,103,282,102,282,97,321,98"/>
+<area shape="rect" href="alltoallv__example_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Four&#45;process variable&#45;count exchange using the project&#39;s containers. Build: mpicxx &#45;std=c++20 &#45;O2 &#45;I/..." alt="" coords="170,142,225,167"/>
+<area shape="poly" title=" " alt="" coords="324,128,226,151,224,146,322,123"/>
+<area shape="rect" href="bruck__Alltoall_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,85,60,110"/>
+<area shape="poly" title=" " alt="" coords="99,100,60,100,60,95,99,95"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a89b12a7e61e6fca37b25740a88da16fe" name="a89b12a7e61e6fca37b25740a88da16fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89b12a7e61e6fca37b25740a88da16fe">&#9670;&#160;</a></span>print_multiarray_in_order()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , size_t NumD&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void mpi_io::print_multiarray_in_order </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmulti__array_1_1array.html">multi_array::array</a>&lt; T, NumD &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MPI_Comm&#160;</td>
+          <td class="paramname"><em>comm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacempi__io_a89b12a7e61e6fca37b25740a88da16fe_icgraph.png" border="0" usemap="#anamespacempi__io_a89b12a7e61e6fca37b25740a88da16fe_icgraph" alt=""/></div>
+<map name="anamespacempi__io_a89b12a7e61e6fca37b25740a88da16fe_icgraph" id="anamespacempi__io_a89b12a7e61e6fca37b25740a88da16fe_icgraph">
+<area shape="rect" title=" " alt="" coords="561,69,740,109"/>
+<area shape="rect" href="namespacempi__algorithm.html#a5ccccb65a5de06126cbbb26574c2ffb9" title="Each rank sends rank + 2 * dest + 1 elements to dest." alt="" coords="335,69,513,109"/>
+<area shape="poly" title=" " alt="" coords="547,92,514,92,514,87,547,87"/>
+<area shape="poly" title=" " alt="" coords="462,58,449,51,424,48,402,50,389,55,384,61,387,68,382,70,379,60,386,50,401,45,424,43,450,46,465,53"/>
+<area shape="rect" href="namespacempi__algorithm.html#a7c5e18744fdbd971c238d14bf147eb50" title="All ranks send 1, 2, 3 and 4 rows to ranks 0, 1, 2 and 3." alt="" coords="108,5,287,45"/>
+<area shape="poly" title=" " alt="" coords="338,68,268,48,269,43,340,63"/>
+<area shape="rect" href="namespacempi__algorithm.html#a5f4db94e91d99d00ce6b9808c7370a5c" title="Bruck&#39;s All&#45;to&#45;All communication algorithm using non&#45;blocking MPI calls." alt="" coords="113,69,282,109"/>
+<area shape="poly" title=" " alt="" coords="321,92,282,92,282,87,321,87"/>
+<area shape="rect" href="alltoallv__example_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Four&#45;process variable&#45;count exchange using the project&#39;s containers. Build: mpicxx &#45;std=c++20 &#45;O2 &#45;I/..." alt="" coords="170,134,225,159"/>
+<area shape="poly" title=" " alt="" coords="332,115,226,143,224,137,330,110"/>
+<area shape="rect" href="bruck__Alltoall_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,77,60,102"/>
+<area shape="poly" title=" " alt="" coords="99,92,60,92,60,87,99,87"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a6789d78447c776ae7e780341cad3f4a0" name="a6789d78447c776ae7e780341cad3f4a0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6789d78447c776ae7e780341cad3f4a0">&#9670;&#160;</a></span>write_array_Cartesian_io_binary()</h2>
 
@@ -152,16 +364,6 @@ template&lt;typename T , size_t NumD&gt; </div>
   </table>
   </dd>
 </dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespacempi__io_a6789d78447c776ae7e780341cad3f4a0_cgraph.png" border="0" usemap="#anamespacempi__io_a6789d78447c776ae7e780341cad3f4a0_cgraph" alt=""/></div>
-<map name="anamespacempi__io_a6789d78447c776ae7e780341cad3f4a0_cgraph" id="anamespacempi__io_a6789d78447c776ae7e780341cad3f4a0_cgraph">
-<area shape="rect" title="Write Cartesian distributed array to file in binary using MPI&#45;IO MPI_File_write_all ." alt="" coords="5,5,164,45"/>
-<area shape="rect" href="classmulti__array_1_1array.html#afa1ab594cdd35f550ce49fd68754180f" title=" " alt="" coords="212,5,351,45"/>
-<area shape="poly" title=" " alt="" coords="164,23,198,23,198,28,164,28"/>
-</map>
-</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
