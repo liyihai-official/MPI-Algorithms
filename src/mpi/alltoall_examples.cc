@@ -120,7 +120,8 @@ int Alltoallv_example(MPI_Comm comm)
 /// @note Each rank owns a separate 10-by-3 matrix. Counts and displacements
 ///       are numbers of T elements, not numbers of rows. Indices start at zero.
 template <typename T>
-int Alltoallv_2d_example(MPI_Comm comm)
+int Alltoallv_2d_example(
+  MPI_Comm comm)
 {
   int rank{-1}, num_procs{0};
   MPI_Comm_rank(comm, &rank);
@@ -175,7 +176,8 @@ int Alltoallv_2d_example(MPI_Comm comm)
 
   // The common column count makes every received block a whole set of rows.
   int recv_nrows{total_recv / ncols};
-  multi_array::array<T, 2> recv_arr(recv_nrows, ncols);
+  multi_array::array<T, 2>
+    recv_arr(recv_nrows, ncols);
 
   auto print_matrix = [&](
                         const multi_array::array<T, 2>& matrix,
@@ -187,6 +189,7 @@ int Alltoallv_2d_example(MPI_Comm comm)
     local << "shape: " << matrix.shape().dims[0] << " x " << ncols << '\n';
     local << (sending ? "sendcounts: " : "recvcounts: ") << counts;
     local << (sending ? "sdispls:    " : "rdispls:    ") << displs;
+
     for (int peer = 0; peer < num_procs; ++peer)
     {
       int first_row{displs[peer] / ncols};
@@ -204,7 +207,8 @@ int Alltoallv_2d_example(MPI_Comm comm)
     {
       for (int col = 0; col < ncols; ++col)
         local << std::setw(10)
-              << +matrix(row, col) << ' ';
+              << +matrix(row, col)
+              << ' ';
       local << '\n';
     }
     mpi_io::print_in_order(
@@ -232,21 +236,36 @@ int Alltoallv_2d_example(MPI_Comm comm)
   // Check every received cell against its original source row and column.
   int local_ok{1}, all_ok{0};
   int source_first_row{rank * (rank + 1) / 2};
-  if (total_send != static_cast<int>(send_arr.size())) local_ok = 0;
+  if (total_send != static_cast<int>(send_arr.size()))
+    local_ok = 0;
+
   for (int src = 0; src < num_procs; ++src)
   {
-    if (recvcounts[src] != (rank + 1) * ncols) local_ok = 0;
+    if (recvcounts[src] != (rank + 1) * ncols)
+      local_ok = 0;
     int recv_first_row{rdispls[src] / ncols};
+
     for (int j = 0; j < rank + 1; ++j)
       for (int col = 0; col < ncols; ++col)
       {
         T expected{static_cast<T>(1000 * src + 10 * (source_first_row + j) + col)};
-        if (recv_arr(recv_first_row + j, col) != expected) local_ok = 0;
+        if (recv_arr(recv_first_row + j, col) != expected)
+          local_ok = 0;
       }
   }
-  MPI_Allreduce(&local_ok, &all_ok, 1, count_type, MPI_MIN, comm);
+  MPI_Allreduce(
+    &local_ok,
+    &all_ok,
+    1,
+    count_type,
+    MPI_MIN,
+    comm);
+
   if (rank == 0)
-    std::cout << "Validation: " << (all_ok ? "PASS" : "FAIL") << std::endl;
+    std::cout << "Validation: "
+              << (all_ok ? "PASS" : "FAIL")
+              << std::endl;
+
   return all_ok ? 0 : 1;
 }
 
