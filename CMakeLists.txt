@@ -46,6 +46,7 @@ set(EXECUTABLES
   bruck_Alltoall 
   conways-game-2D 
   conways-game-3D
+  alltoallv_example_01
 )
 
 # Compile definition macros
