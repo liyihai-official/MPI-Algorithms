@@ -39,6 +39,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
 add_executable(bruck_Alltoall bruck_Alltoall.cc)
 add_executable(conways-game-2D conway2D.cc src/mpi/io_Cartesian.cc)
 add_executable(conways-game-3D conway3D.cc src/mpi/io_Cartesian.cc)
+add_executable(alltoallv_example_01 alltoallv_example.cc)
 
 # linkings
 set(EXECUTABLES 
