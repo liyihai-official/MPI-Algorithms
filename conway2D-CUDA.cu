@@ -16,8 +16,10 @@
 #include "mpi/topology_Cartesian.hpp"
 
 int world_rank = 0;
+
 using Cell = uint8_t;
 using Grid = std::vector<Cell>;
+
 void check(cudaError_t e)
 {
   if (e != cudaSuccess)
@@ -416,7 +418,9 @@ int run(int argc, char** argv)
 }
 
 // 同一节点内按 local rank 选择可见 GPU；单卡也支持多个进程共享。
-int main(int argc, char** argv)
+int main(
+  int argc,
+  char** argv)
 {
   MPI_Init(&argc, &argv);
   MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
@@ -424,7 +428,9 @@ int main(int argc, char** argv)
   {
     bool help = false;
     for (int i = 1; i < argc; ++i)
-      if (std::string(argv[i]) == "--help") help = true;
+      if (std::string(argv[i]) == "--help")
+        help = true;
+
     if (!help)
     {
       int devices = 0, local_rank = 0;
@@ -443,6 +449,7 @@ int main(int argc, char** argv)
 
       MPI_Comm_rank(local, &local_rank);
       MPI_Comm_free(&local);
+
       check(cudaSetDevice(local_rank % devices));
     }
     int result = run(argc, argv);
