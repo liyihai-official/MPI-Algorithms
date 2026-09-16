@@ -18,14 +18,18 @@ int main(int argc, char** argv)
 {
   MPI_Init(&argc, &argv);
   int result{0};
-  using value_type = int;  // double also works, using the existing type trait.
+  using value_type = int;  // double also works
 
   if (argc > 1 && std::string_view(argv[1]) == "--cartesian")
   {
-    multi_array::multi_array_shape<2> global_shape(8, 8);
-    mpi_topology::Cartesian<value_type, 2> topology(global_shape, MPI_COMM_WORLD);
+    multi_array::multi_array_shape<2>
+      global_shape(8, 8);
 
-    result = mpi_algorithm::Alltoallv_example<value_type>(topology.comm_cart);
+    mpi_topology::Cartesian<value_type, 2>
+      topology(global_shape, MPI_COMM_WORLD);
+
+    result = mpi_algorithm::Alltoallv_example<value_type>(
+      topology.comm_cart);
   }  // Destroy topology (MPI_Comm_free) before MPI_Finalize.
   else
   {

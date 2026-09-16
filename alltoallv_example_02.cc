@@ -17,8 +17,9 @@
 int main(int argc, char** argv)
 {
   MPI_Init(&argc, &argv);
-  using value_type = int;  // double also works with the project's type trait.
-  int result{mpi_algorithm::Alltoallv_2d_example<value_type>(MPI_COMM_WORLD)};
+  using value_type = int;  // double
+  int result{
+    mpi_algorithm::Alltoallv_2d_example<value_type>(MPI_COMM_WORLD)};
   MPI_Finalize();
   return result;
 }
