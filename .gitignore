@@ -7,3 +7,4 @@ build-hybrid/
 *.csv
 temp*
 slides/
+scripts/
