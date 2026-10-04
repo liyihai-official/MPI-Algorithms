@@ -44,7 +44,9 @@ inline bool initialize_mpi(int& argc, char**& argv)
   return true;
 }
 
-inline run_options parse_options(int argc, char** argv, int default_generations)
+inline run_options parse_options(int argc,
+                                 char** argv,
+                                 int default_generations)
 {
   run_options result;
   result.generations = default_generations;
@@ -102,7 +104,10 @@ inline void prepare_output(const run_options& options)
     throw std::runtime_error("Cannot create output directory.");
 }
 
-inline void report_times(MPI_Comm comm, double evolving, double total, int generations)
+inline void report_times(MPI_Comm comm,
+                         double evolving,
+                         double total,
+                         int generations)
 {
   const double local[2] = {evolving, total};
   double maximum[2] = {};
