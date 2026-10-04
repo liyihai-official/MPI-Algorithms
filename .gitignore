@@ -3,5 +3,6 @@
 .vscode/
 *.log
 build/
+build-hybrid/
 *.csv
 temp*
