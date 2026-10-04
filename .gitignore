@@ -6,3 +6,4 @@ build/
 build-hybrid/
 *.csv
 temp*
+slides/
